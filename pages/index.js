@@ -1,3 +1,9 @@
+import Hero from "../components/hero";
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello develop!</h1>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
