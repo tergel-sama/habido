@@ -1,5 +1,7 @@
-import { Box, Flex, Text, IconButton, Button, Stack, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, Text, IconButton, Button, Stack, useBreakpointValue, useDisclosure, Image } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+
+import LogoImage from "../assets/img/navbarLogo.png";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -17,7 +19,7 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Text textAlign={useBreakpointValue({ base: "center", md: "left" })} fontFamily="heading">
-            Logo
+            <Image src={LogoImage?.src} />
           </Text>
         </Flex>
 

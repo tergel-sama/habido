@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Box, Container, Link, SimpleGrid, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Link, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 
 const Logo = (props) => (
   <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -22,12 +22,12 @@ const ListHeader = ({ children }) => (
 
 export default function LargeWithLogoLeft() {
   return (
-    <Box bg={useColorModeValue("gray.50", "gray.900")} color={useColorModeValue("gray.700", "gray.200")}>
+    <Box>
       <Container as={Stack} maxW="6xl" py={10}>
         <SimpleGrid templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr 1fr" }} spacing={8}>
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue("gray.700", "white")} />
+              <Logo />
             </Box>
             <Text fontSize="sm">© 2022 Chakra Templates. All rights reserved</Text>
           </Stack>

@@ -1,15 +1,17 @@
 /* eslint-disable react/button-has-type */
 import { chakra, Box, Flex, SimpleGrid, Image } from "@chakra-ui/react";
 
+import HeroImage from "../assets/img/heroImage.png";
+
 export default function App() {
   return (
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spacing={0}
-      bg="f4f6f8"
-      h="100vh"
+      h="110vh"
+      bg="#f4f6f8"
+      overflow="hidden"
       _after={{
-        bg: "#f4f6f8",
         opacity: 0.25,
         pos: "absolute",
         top: 0,
@@ -28,17 +30,19 @@ export default function App() {
           fontSize={{ base: "4xl", md: "4xl", lg: "55px" }}
           lineHeight="normal"
         >
-          HabiDo аппликейшнаа <br /> татаад амьдралын <br /> чанараа дээшлүүл
+          <span className="text-[#fa6c51]"> HabiDo </span> аппликейшнаа <br /> татаад {"  "}
+          <span className="text-[#fa6c51]">
+            амьдралын <br /> чанараа дээшлүүл
+          </span>
         </chakra.h1>
       </Flex>
       <Box>
         <Image
-          src="https://images.unsplash.com/photo-1531548731165-c6ae86ff6491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
-          alt="3 women looking at a laptop"
+          src={HeroImage?.src}
+          alt="holding phone"
           fit="cover"
           w="full"
           h={{ base: 64, md: "full" }}
-          bg="gray.100"
           loading="lazy"
         />
       </Box>
