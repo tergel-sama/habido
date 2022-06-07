@@ -5,6 +5,13 @@ import Feature3Image from "../assets/img/feature3Image.png";
 import translateImg from "../assets/icons/translate.svg";
 import book from "../assets/icons/book.svg";
 import chair from "../assets/icons/chair.svg";
+import stair from "../assets/icons/stairs.svg";
+import running from "../assets/icons/running.svg";
+import bike from "../assets/icons/bike.svg";
+import swimming from "../assets/icons/swim.svg";
+import mountain from "../assets/icons/mountain.svg";
+import dancing from "../assets/icons/circle.svg";
+import abs from "../assets/icons/abs.svg";
 
 const habit1 = [
   {
@@ -25,6 +32,42 @@ const habit1 = [
       {
         title: "Эмх цэгцтэй байх",
         img: chair?.src,
+      },
+    ],
+  },
+];
+
+const habit2 = [
+  {
+    title: "Хөдөлгөөн",
+    content: [
+      {
+        title: "Явган алхах",
+        img: stair?.src,
+      },
+      {
+        title: "Богино гүйлт",
+        img: running?.src,
+      },
+      {
+        title: "Дугуй унах",
+        img: bike?.src,
+      },
+      {
+        title: "Усанд сэлэх",
+        img: swimming?.src,
+      },
+      {
+        title: "Ууланд алхах",
+        img: mountain?.src,
+      },
+      {
+        title: "Бүжиглэх",
+        img: dancing?.src,
+      },
+      {
+        title: "Дасгал хийх",
+        img: abs?.src,
       },
     ],
   },
@@ -53,7 +96,11 @@ export default function Feature3() {
                 <Habit key={index} data={item} />
               ))}
             </Box>
-            <Box>asd</Box>
+            <Box>
+              {habit2.map((item, index) => (
+                <Habit key={index} data={item} />
+              ))}
+            </Box>
           </SimpleGrid>
         </Box>
         <Box bg="gray">
