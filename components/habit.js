@@ -5,10 +5,10 @@ import LittleCard from "./littleCard";
 export default function Habit({ data }) {
   return (
     <Box>
-      <Text fontFamily="SFProRounded" textColor="#424852" fontSize="16px" fontWeight={900} lineHeight="normal">
+      <Text my={4} fontFamily="SFProRounded" textColor="#424852" fontSize="16px" fontWeight={900} lineHeight="normal">
         {data?.title}
       </Text>
-      <SimpleGrid columns={2}>
+      <SimpleGrid spacing={4} columns={2}>
         {data.content.map((item, index) => (
           <LittleCard key={index} data={item} />
         ))}

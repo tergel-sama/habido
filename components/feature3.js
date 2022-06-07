@@ -39,6 +39,7 @@ export default function Feature3() {
         fontWeight={300}
         fontSize="55px"
         fontFamily="SFProRounded"
+        mb={12}
         textColor="#fa6c51"
       >
         <span className="text-[#424852]">7 бүлгийн </span> 35 дадлаас <span className="text-[#424852]"> сонгон </span>
