@@ -103,7 +103,7 @@ export default function Feature3() {
             </Box>
           </SimpleGrid>
         </Box>
-        <Box bg="gray">
+        <Box>
           <Image src={Feature3Image?.src} />
         </Box>
       </SimpleGrid>
