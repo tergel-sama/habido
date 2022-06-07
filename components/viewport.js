@@ -19,7 +19,9 @@ const Block = (props) => {
     </div>
   );
 };
+
 const ViewportBlock = handleViewport(Block);
+
 const MyPort = ({ playerId }) => (
   <div>
     <ViewportBlock id={playerId} />
