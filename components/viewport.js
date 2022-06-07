@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 const Block = (props) => {
   const { inViewport, forwardedRef } = props;
   const isPlaying = inViewport ? 1 : 0;
+
   return (
     <div className="viewport-block" ref={forwardedRef}>
       <iframe
@@ -18,12 +19,11 @@ const Block = (props) => {
     </div>
   );
 };
-
 const ViewportBlock = handleViewport(Block);
-
 const MyPort = ({ playerId }) => (
   <div>
     <ViewportBlock id={playerId} />
   </div>
 );
+
 export default MyPort;
