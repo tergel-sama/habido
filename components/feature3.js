@@ -85,7 +85,7 @@ export default function Feature3() {
         mb={12}
         textColor="#fa6c51"
       >
-        <span className="text-[#424852]">7 бүлгийн </span> 35 дадлаас <span className="text-[#424852]"> сонгон </span>
+        <span className="text-[#424852]">7 бүлгийн </span> 34 дадлаас <span className="text-[#424852]"> сонгон </span>
         хэрэгжүүлэх боломж
       </Text>
       <SimpleGrid columns={{ base: 1, xl: 2 }}>
