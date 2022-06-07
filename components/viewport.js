@@ -1,9 +1,8 @@
 import handleViewport from "react-in-viewport";
 import { useState, useEffect } from "react";
-const Block = (props) => {
-  console.log("ymar", props.id);
-  const { inViewport, forwardedRef } = props;
 
+const Block = (props) => {
+  const { inViewport, forwardedRef } = props;
   const isPlaying = inViewport ? 1 : 0;
   return (
     <div className="viewport-block" ref={forwardedRef}>
