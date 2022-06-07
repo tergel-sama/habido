@@ -1,19 +1,23 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Image, Text } from "@chakra-ui/react";
 
-export default function LittleCard() {
+// import IconsTest from "../assets/icons/book.svg";
+
+export default function LittleCard({ data }) {
   return (
-    <Box
-      //   boxShadow="0 8px 24px 0 rgba(0, 0, 0, 0.05)"
-      className="shadow-xl rounded-[15px]"
+    <HStack
+      className="transition duration-150 ease-in-out shadow-xl rounded-[15px] hover:scale-125 "
       w="160px"
       h="60px"
-      p="6"
       bg="white"
     >
-      <HStack>
-        <Box>asd</Box>
-        <Box>asdasd</Box>
-      </HStack>
-    </Box>
+      <Box pr={2} pl={4}>
+        <Image src={data.img} />
+      </Box>
+      <Box>
+        <Text lineHeight="normal" fontWeight={500} fontFamily="SFProRounded" fontSize="13px">
+          {data.title}
+        </Text>
+      </Box>
+    </HStack>
   );
 }

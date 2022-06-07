@@ -1,7 +1,34 @@
 import { Box, SimpleGrid, Text, Image } from "@chakra-ui/react";
 
-import LittleCard from "./littleCard";
+import Habit from "./habit";
 import Feature3Image from "../assets/img/feature3Image.png";
+import translateImg from "../assets/icons/translate.svg";
+import book from "../assets/icons/book.svg";
+import chair from "../assets/icons/chair.svg";
+
+const habit1 = [
+  {
+    title: "Хувийн хөгжил",
+    content: [
+      {
+        title: "Хэл сурах",
+        img: translateImg?.src,
+      },
+      {
+        title: "Ном унших",
+        img: book?.src,
+      },
+      {
+        title: "Бүтээлч зүйл хийх",
+        img: translateImg?.src,
+      },
+      {
+        title: "Эмх цэгцтэй байх",
+        img: chair?.src,
+      },
+    ],
+  },
+];
 
 export default function Feature3() {
   return (
@@ -21,7 +48,9 @@ export default function Feature3() {
         <Box>
           <SimpleGrid columns={2}>
             <Box>
-              <LittleCard />
+              {habit1.map((item, index) => (
+                <Habit key={index} data={item} />
+              ))}
             </Box>
             <Box>asd</Box>
           </SimpleGrid>
