@@ -3,7 +3,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 export default function Highlight() {
   return (
-    <Flex alignItems="center" justifyContent="space-between" borderWidth={0} overflowX="auto">
+    <Flex alignItems="center" my={12} justifyContent="space-between" borderWidth={0} overflowX="auto">
       <Text mr={6} fontFamily="SFProRounded" fontSize="44px" fontWeight={900} color="#424852">
         Онцлох
       </Text>
