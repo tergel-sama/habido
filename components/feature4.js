@@ -1,5 +1,62 @@
-import { Box } from "@chakra-ui/react";
+/* eslint-disable react/button-has-type */
+import { chakra, Box, Flex, SimpleGrid, Image, Button } from "@chakra-ui/react";
+import Google from "../assets/img/Google.png";
+import HeroImage from "../assets/img/web3.1.png";
 
 export default function Feature4() {
-  return <Box>test</Box>;
+  return (
+    <SimpleGrid
+      columns={{ base: 1, md: 2 }}
+      spacing={0}
+      h="100vh"
+      bg="#f4f6f8"
+      overflow="hidden"
+      _after={{
+        opacity: 0.25,
+        pos: "absolute",
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        zIndex: -1,
+        content: '" "',
+      }}
+    >
+      <Flex
+        direction="column"
+        alignItems="start"
+        justifyContent="space-around"
+        pl={{ base: 4, md: 12, "2xl": "15rem" }}
+      >
+        <Box></Box>
+        <Box>
+          <chakra.h1
+            fontFamily="SFProRounded"
+            mb={6}
+            fontWeight={300}
+            fontSize={{ base: "4xl", md: "4xl", lg: "55px" }}
+            lineHeight="normal"
+          >
+            <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа </span> <br />
+            <span className="text-[#fa6c51]">татаарай</span>
+          </chakra.h1>
+          <Flex justifyContent={"flex-start"} alignItems={"start"}>
+            <Button>App Store</Button>
+            <Button>App Store</Button>
+            <Button>App Store</Button>
+          </Flex>
+        </Box>
+      </Flex>
+      <Box>
+        <Image
+          src={HeroImage?.src}
+          alt="holding phone"
+          fit="cover"
+          w="full"
+          h={{ base: 64, md: "full" }}
+          loading="lazy"
+        />
+      </Box>
+    </SimpleGrid>
+  );
 }
