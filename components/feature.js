@@ -3,7 +3,7 @@ import { Box, chakra, Flex, SimpleGrid } from "@chakra-ui/react";
 export default function App() {
   return (
     <Flex w="full" justifyContent="center" alignItems="center">
-      <Box px={{ base: 4, xl: "15rem" }} py={20} mx="auto">
+      <Box px={{ base: 4, md: 12, "2xl": "15rem" }} py={20} mx="auto">
         <SimpleGrid
           alignItems="start"
           columns={{ base: 1, md: 2 }}

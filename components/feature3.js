@@ -75,7 +75,7 @@ const habit2 = [
 
 export default function Feature3() {
   return (
-    <Box py="58px" pl={{ base: 4, lg: "15rem" }}>
+    <Box py="58px" pl={{ base: 4, md: 12, "2xl": "15rem" }}>
       <Text
         w="522px"
         lineHeight="normal"
@@ -85,7 +85,7 @@ export default function Feature3() {
         mb={12}
         textColor="#fa6c51"
       >
-        <span className="text-[#424852]">7 бүлгийн </span> 34 дадлаас <span className="text-[#424852]"> сонгон </span>
+        <span className="text-[#424852]">7 бүлгийн </span> 35 дадлаас <span className="text-[#424852]"> сонгон </span>
         хэрэгжүүлэх боломж
       </Text>
       <SimpleGrid columns={{ base: 1, xl: 2 }}>

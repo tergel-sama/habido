@@ -22,7 +22,13 @@ export default function App() {
         content: '" "',
       }}
     >
-      <Flex direction="column" alignItems="start" justifyContent="center" pl={{ base: 4, lg: "15rem" }} py={24}>
+      <Flex
+        direction="column"
+        alignItems="start"
+        justifyContent="center"
+        pl={{ base: 4, md: 12, "2xl": "15rem" }}
+        py={24}
+      >
         <chakra.h1
           fontFamily="SFProRounded"
           mb={6}

@@ -8,7 +8,7 @@ export default function WithSubnavigation() {
 
   return (
     <Box>
-      <Flex minH="100px" py={{ base: 2 }} px={{ base: 4, lg: "15rem" }} borderStyle="solid" align="center">
+      <Flex minH="100px" py={{ base: 2 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">
         <Flex flex={{ base: 1, md: "auto" }} ml={{ base: -2 }} display={{ base: "flex", md: "none" }}>
           <IconButton
             onClick={onToggle}
