@@ -1,14 +1,17 @@
+import dynamic from "next/dynamic";
+
 import Hero from "../components/hero";
-import Feature from "../components/feature";
 import Feature2 from "../components/feature2";
 import Feature3 from "../components/feature3";
 import YoutubeEmbed from "../components/viewport";
+
+const FeatureWithNoSSR = dynamic(() => import("../components/feature"), { ssr: false });
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Feature />
+      <FeatureWithNoSSR />
       <YoutubeEmbed playerId="gIx2F0o2jWQ" />
       <Feature2 />
       <Feature3 />

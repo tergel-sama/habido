@@ -9,7 +9,7 @@ export default function Habit({ data }) {
         {data?.title}
       </Text>
       <SimpleGrid spacingY={4} spacinX="10px" columns={2}>
-        {data.content.map((item, index) => (
+        {data?.content.map((item, index) => (
           <LittleCard key={index} data={item} />
         ))}
       </SimpleGrid>
