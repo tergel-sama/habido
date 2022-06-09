@@ -253,7 +253,7 @@ export default function Feature3() {
             </Box>
           </SimpleGrid>
         </Box>
-        <Box>
+        <Box display="flex">
           <Image src={Feature3Image?.src} />
         </Box>
       </SimpleGrid>

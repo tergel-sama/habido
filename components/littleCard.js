@@ -12,7 +12,7 @@ export default function LittleCard({ data }) {
         <Image src={data.img} />
       </Box>
       <Box>
-        <Text lineHeight="normal" fontWeight={500} fontFamily="SFProRounded" fontSize="13px">
+        <Text pr="2px" lineHeight="normal" fontWeight={500} fontFamily="SFProRounded" fontSize="13px">
           {data.title}
         </Text>
       </Box>
