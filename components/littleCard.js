@@ -1,7 +1,5 @@
 import { Box, HStack, Image, Text } from "@chakra-ui/react";
 
-// import IconsTest from "../assets/icons/book.svg";
-
 export default function LittleCard({ data }) {
   return (
     <HStack

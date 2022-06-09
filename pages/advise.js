@@ -4,6 +4,7 @@ import PageHeader from "../components/pageHeader";
 import Highlight from "../components/highlight";
 import BigCard from "../components/bigCard";
 import Others from "../components/others";
+import Pagination from "../components/pagination";
 
 export default function Advise() {
   return (
@@ -24,6 +25,7 @@ export default function Advise() {
         <BigCard />
         <BigCard />
       </SimpleGrid>
+      <Pagination />
     </Box>
   );
 }
