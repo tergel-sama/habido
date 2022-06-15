@@ -1,3 +1,3 @@
 export default function News() {
-  return <h1>working!</h1>;
+  return <h1>working! desu</h1>;
 }
