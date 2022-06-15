@@ -1,11 +1,11 @@
-import { Box, chakra, SimpleGrid, Image } from "@chakra-ui/react";
+import { Box, chakra, Stack, Image } from "@chakra-ui/react";
 
 import feature4Img from "../assets/img/feature4.png";
 
 export default function Feature4() {
   return (
     <Box h="100vh" pl={{ base: 4, md: 12, "2xl": "15rem" }} mx="auto">
-      <SimpleGrid alignItems="start" columns={{ base: 1, md: 2 }}>
+      <Stack display="flex" spacing={8} direction="row">
         <Box my="auto">
           <chakra.h2
             mb={4}
@@ -30,10 +30,10 @@ export default function Feature4() {
             asdasd
           </chakra.p>
         </Box>
-        <Box display="flex" w="full" h="full">
-          <Image mt="auto" w="full" src={feature4Img?.src} />
+        <Box mt="auto" w="full" h="full">
+          <Image w="full" src={feature4Img?.src} />
         </Box>
-      </SimpleGrid>
+      </Stack>
     </Box>
   );
 }

@@ -16,6 +16,7 @@ export default function Home() {
       <YoutubeEmbed playerId="gIx2F0o2jWQ" />
       <Feature2 />
       <Feature3 />
+      <YoutubeEmbed playerId="gIx2F0o2jWQ" />
       <Feature4 />
     </>
   );
