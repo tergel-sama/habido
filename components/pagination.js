@@ -3,7 +3,7 @@ import { chakra, Flex, Icon } from "@chakra-ui/react";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export default function Pagination() {
+export default function Pagination({ size, current, onChangePag }) {
   const PagButton = (props) => {
     const activeStyle = {
       bg: "#FDC4B9",
@@ -11,6 +11,7 @@ export default function Pagination() {
     };
     return (
       <chakra.button
+        onClick={props.onChangeBtn}
         mx={1}
         px={4}
         py={2}
@@ -28,15 +29,15 @@ export default function Pagination() {
   return (
     <Flex p={50} w="full" alignItems="center" justifyContent="center">
       <Flex>
-        <PagButton>
+        <PagButton onChangeBtn={() => +current !== 1 && onChangePag(current - 1)}>
           <Icon as={IoIosArrowBack} color="#fa6c51" boxSize={4} />
         </PagButton>
-        <PagButton>1</PagButton>
-        <PagButton active>2</PagButton>
-        <PagButton>3</PagButton>
-        <PagButton>4</PagButton>
-        <PagButton>5</PagButton>
-        <PagButton>
+        {[...Array(size).keys()].map((item) => (
+          <PagButton onChangeBtn={() => onChangePag(item + 1)} active={+item + 1 === current}>
+            {item + 1}
+          </PagButton>
+        ))}
+        <PagButton onChangeBtn={() => +current !== size && onChangePag(current + 1)}>
           <Icon as={IoIosArrowForward} color="#fa6c51" boxSize={4} />
         </PagButton>
       </Flex>

@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import useSWR from "swr";
 
@@ -11,31 +11,39 @@ import Pagination from "../components/pagination";
 const fetcher = (url) => fetch(url).then((result) => result.json());
 
 export default function Advise() {
-  const { data, error } = useSWR("http://192.168.2.21:8041/web/highlighted-contents", fetcher);
-  // const [highlightedData, setHighlightedData] = useState([]);
+  const [pag, setPag] = useState(1);
+  const [isHighlight, setHighlight] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const { data: highlightData, error } = useSWR("http://192.168.2.21:8041/web/highlighted-contents", fetcher);
+  const { data: contents } = useSWR(
+    `http://192.168.2.21:8041/web/contents?SearchText=${searchText}&Pid=${pag}&Psize=6`,
+    fetcher
+  );
+  const { data: tags } = useSWR("http://192.168.2.21:8041/web/content/tags", fetcher);
 
   if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  if (!highlightData) return <div>loading...</div>;
 
   return (
     <Box px={{ base: 4, md: 12, "2xl": "15rem" }}>
-      <PageHeader />
-      <Highlight />
+      <PageHeader setSearchText={setSearchText} tags={tags} />
+      {searchText === "" ? (
+        <>
+          <Highlight isHighlight={isHighlight} setHighlight={setHighlight} number={highlightData.length} />
+          <SimpleGrid spacing={10} columns={3}>
+            {isHighlight
+              ? highlightData.map((item, index) => <BigCard key={index} data={item} />)
+              : highlightData.slice(0, 3).map((item, index) => <BigCard key={index} data={item} />)}
+          </SimpleGrid>
+          <Others size={contents?.rowCount} />
+        </>
+      ) : null}
       <SimpleGrid spacing={10} columns={3}>
-        <BigCard />
-        <BigCard />
-        <BigCard />
+        {contents?.results.map((item, index) => (
+          <BigCard key={index} data={item} />
+        ))}
       </SimpleGrid>
-      <Others />
-      <SimpleGrid spacing={10} columns={3}>
-        <BigCard />
-        <BigCard />
-        <BigCard />
-        <BigCard />
-        <BigCard />
-        <BigCard />
-      </SimpleGrid>
-      <Pagination />
+      <Pagination onChangePag={setPag} current={pag} size={contents?.pageCount} />
     </Box>
   );
 }
