@@ -32,7 +32,15 @@ export default function News() {
       <Flex minH="100px" py={{ base: 2 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">
         <Box position="relative" width="100%" backgroundColor="#fb836f" borderRadius="18px">
           <img src="https://tinyurl.com/49byrses" alt="home" style={{ width: "100%" }} />
-          <Button colorScheme="#fff" position="absolute" left="41px" top="31px" z-index="-1" width="136px" height="27px">
+          <Button
+            colorScheme="#fff"
+            position="absolute"
+            left="41px"
+            top="31px"
+            z-index="-1"
+            width="136px"
+            height="27px"
+          >
             сэтгэл зүй
           </Button>
         </Box>
