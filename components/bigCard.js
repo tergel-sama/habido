@@ -1,7 +1,8 @@
 import { Box, Heading, Text, Stack, Image, Flex, Spacer } from "@chakra-ui/react";
 import { AiOutlineClockCircle, AiOutlineEye } from "react-icons/ai";
+import ReactHtmlParser from "react-html-parser";
 
-export default function blogPostWithImage() {
+export default function blogPostWithImage({ data }) {
   return (
     <Box
       position="relative"
@@ -16,14 +17,7 @@ export default function blogPostWithImage() {
       flexDir="column"
     >
       <Box position="relative">
-        <Image
-          overflow="hidden"
-          borderRadius="15px"
-          h="200px"
-          w="full"
-          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-          objectFit="cover"
-        />
+        <Image overflow="hidden" borderRadius="15px" h="200px" w="full" src={data?.contentPhoto} objectFit="cover" />
         <Box
           py="5px"
           px="10px"
@@ -39,7 +33,7 @@ export default function blogPostWithImage() {
           bottom={3}
           position="absolute"
         >
-          Сэтгэл зүй
+          {data?.tags[0]?.name}
         </Box>
       </Box>
       <Stack mt={6}>
@@ -48,7 +42,7 @@ export default function blogPostWithImage() {
             <AiOutlineClockCircle color="#707070" />
           </Box>
           <Text fontSize="15px" textColor="#707070">
-            2 минут уншина
+            {data?.readTime} минут уншина
           </Text>
         </Flex>
         <Heading
@@ -59,7 +53,7 @@ export default function blogPostWithImage() {
           fontSize="18px"
           fontFamily="SFProRounded"
         >
-          Сэтгэл хөдлөлийн тухай мэдэх хэрэгтэй зүйлс
+          {data?.title}
         </Heading>
         <Box py={3}>
           <Text
@@ -70,8 +64,7 @@ export default function blogPostWithImage() {
             fontSize="15px"
             fontFamily="SFProRounded"
           >
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            {ReactHtmlParser(data?.text)}
           </Text>
         </Box>
       </Stack>
@@ -81,7 +74,7 @@ export default function blogPostWithImage() {
             <AiOutlineEye size={19} color="#707070" />
           </Box>
           <Text fontSize="15px" textColor="#707070">
-            200
+            {data?.view}
           </Text>
           <Spacer />
           <Text>Нийтэлсэн: 2022.03.01 17:00</Text>

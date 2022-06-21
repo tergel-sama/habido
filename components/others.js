@@ -1,6 +1,6 @@
 import { Flex, Text, Box, Spacer } from "@chakra-ui/react";
 
-export default function Others() {
+export default function Others({ size }) {
   return (
     <Flex my={12} alignItems="center" justifyContent="space-between" borderWidth={0} overflowX="auto">
       <Text mr={6} fontFamily="SFProRounded" fontSize="44px" fontWeight={900} color="#424852">
@@ -16,7 +16,7 @@ export default function Others() {
         h="26px"
         borderRadius="20px"
       >
-        10
+        {size}
       </Box>
       <Spacer />
     </Flex>
