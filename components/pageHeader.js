@@ -24,6 +24,7 @@ export default function PageHeader({ tags, setSearchText, setName }) {
       </InputGroup>
       <Spacer />
       <Select
+        display={{ base: "none", sm: "block" }}
         fontFamily="SFProRounded"
         fontSize="18px"
         border="solid 3px #f4f6f8"

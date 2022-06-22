@@ -21,6 +21,13 @@ export default function Pagination({ size, current, onChangePag }) {
         _hover={!props.disabled && activeStyle}
         cursor={props.disabled && "not-allowed"}
         {...(props.active && activeStyle)}
+        display={
+          props.p &&
+          !props.active && {
+            base: "none",
+            sm: "block",
+          }
+        }
       >
         {props.children}
       </chakra.button>
@@ -33,7 +40,7 @@ export default function Pagination({ size, current, onChangePag }) {
           <Icon as={IoIosArrowBack} color="#fa6c51" boxSize={4} />
         </PagButton>
         {[...Array(size).keys()].map((item, index) => (
-          <PagButton key={index} onChangeBtn={() => onChangePag(item + 1)} active={+item + 1 === current}>
+          <PagButton p key={index} onChangeBtn={() => onChangePag(item + 1)} active={+item + 1 === current}>
             {item + 1}
           </PagButton>
         ))}

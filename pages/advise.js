@@ -31,7 +31,7 @@ export default function Advise() {
       {searchText === "" && name === "" ? (
         <>
           <Highlight isHighlight={isHighlight} setHighlight={setHighlight} number={highlightData.length} />
-          <SimpleGrid spacing={10} columns={3}>
+          <SimpleGrid spacing={10} columns={{ base: 1, md: 2, xl: 3 }}>
             {isHighlight
               ? highlightData.map((item, index) => <BigCard key={index} data={item} />)
               : highlightData.slice(0, 3).map((item, index) => <BigCard key={index} data={item} />)}
@@ -39,7 +39,7 @@ export default function Advise() {
         </>
       ) : null}
       <Others name={name} size={contents?.rowCount} />
-      <SimpleGrid spacing={10} columns={3}>
+      <SimpleGrid spacing={10} columns={{ base: 1, md: 2, xl: 3 }}>
         {contents?.results.map((item, index) => (
           <BigCard key={index} data={item} />
         ))}

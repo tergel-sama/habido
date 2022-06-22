@@ -8,6 +8,7 @@ export default function Highlight({ number, setHighlight, isHighlight }) {
         Онцлох
       </Text>
       <Box
+        display={{ base: "none", sm: "block" }}
         textAlign="center"
         bg="#edf2f7"
         fontFamily="SFProRounded"
