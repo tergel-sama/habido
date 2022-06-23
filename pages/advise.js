@@ -12,11 +12,12 @@ const fetcher = (url) => fetch(url).then((result) => result.json());
 
 export default function Advise() {
   const [pag, setPag] = useState(1);
+  const [name, setName] = useState("");
   const [isHighlight, setHighlight] = useState(false);
   const [searchText, setSearchText] = useState("");
   const { data: highlightData, error } = useSWR("http://192.168.2.21:8041/web/highlighted-contents", fetcher);
   const { data: contents } = useSWR(
-    `http://192.168.2.21:8041/web/contents?SearchText=${searchText}&Pid=${pag}&Psize=6`,
+    `http://192.168.2.21:8041/web/contents?SearchText=${searchText}&Name=${name}&Pid=${pag}&Psize=6`,
     fetcher
   );
   const { data: tags } = useSWR("http://192.168.2.21:8041/web/content/tags", fetcher);
@@ -26,19 +27,19 @@ export default function Advise() {
 
   return (
     <Box px={{ base: 4, md: 12, "2xl": "15rem" }}>
-      <PageHeader setSearchText={setSearchText} tags={tags} />
-      {searchText === "" ? (
+      <PageHeader setName={setName} setSearchText={setSearchText} tags={tags} />
+      {searchText === "" && name === "" ? (
         <>
           <Highlight isHighlight={isHighlight} setHighlight={setHighlight} number={highlightData.length} />
-          <SimpleGrid spacing={10} columns={3}>
+          <SimpleGrid spacing={10} columns={{ base: 1, md: 2, xl: 3 }}>
             {isHighlight
               ? highlightData.map((item, index) => <BigCard key={index} data={item} />)
               : highlightData.slice(0, 3).map((item, index) => <BigCard key={index} data={item} />)}
           </SimpleGrid>
-          <Others size={contents?.rowCount} />
         </>
       ) : null}
-      <SimpleGrid spacing={10} columns={3}>
+      <Others name={name} size={contents?.rowCount} />
+      <SimpleGrid spacing={10} columns={{ base: 1, md: 2, xl: 3 }}>
         {contents?.results.map((item, index) => (
           <BigCard key={index} data={item} />
         ))}

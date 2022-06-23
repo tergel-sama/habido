@@ -7,6 +7,7 @@ export default function blogPostWithImage({ data }) {
     <Box
       position="relative"
       maxW="450px"
+      m="auto"
       h="514px"
       w="full"
       boxShadow="0 8px 24px 0 rgba(0, 0, 0, 0.15);"
