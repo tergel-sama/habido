@@ -32,7 +32,7 @@ export default function LargeWithLogoLeft() {
                 </Text>
               </Flex>
               <Spacer />
-              <Text fontFamily="SFProRounded" fontSize="20px" textColor="#424852" fontWeight="500">
+              <Text fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" fontWeight="500">
                 All rights reserved 2022. Optimal N Max LLC.
               </Text>
             </Stack>
@@ -56,7 +56,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
+              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
                 99999999
               </Link>
             </Flex>
@@ -72,7 +72,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
+              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
                 habido@optimal.mn
               </Link>
             </Flex>
@@ -88,7 +88,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px" width="226px" textColor="#424852" height="40px">
+              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} width="226px" textColor="#424852" height="40px">
                 ХУД, 18-р хороо LS Plaza 8 давхар 801 тоот
               </Link>
             </Flex>
@@ -110,7 +110,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
+              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
                 Follow us on
               </Link>
             </Flex>
@@ -126,7 +126,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
+              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px", md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
                 Like us on
               </Link>
             </Flex>
@@ -142,7 +142,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
+              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px", md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
                 Subscribe us on
               </Link>
             </Flex>
