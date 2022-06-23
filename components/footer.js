@@ -13,35 +13,38 @@ export default function LargeWithLogoLeft() {
       width="100%"
       backgroundColor="#f4f6f8"
       minH="100px"
-      py={{ base: 2 }}
+      py={{ base: 0 }}
       px={{ base: 4, md: 12, "2xl": "15rem" }}
       borderStyle="solid"
     >
       <SimpleGrid templateColumns={{ sm: "1fr 1fr", md: "1fr 1fr" }}>
-        <Stack spacing={6}>
-          <Flex pt="71px" pb="47px">
+        <Stack>
+          <Flex pt="71px" pb="39px">
             <Stack>
               <Box pb="24.3px">
                 <Image src={Logo?.src} />
               </Box>
               <Flex>
-                <Text fontFamily="SFProRounded" fontSize="20px" pb="66px">
+                <Text fontFamily="SFProRounded" fontSize="20px" pb="58px" textColor="#424852">
                   <strong>
                     Happy <span>&#8226;</span> Habit <span>&#8226;</span> Do
                   </strong>
                 </Text>
               </Flex>
               <Spacer />
-              <Text fontFamily="SFProRounded" fontSize="20px">
+              <Text fontFamily="SFProRounded" fontSize="20px" textColor="#424852" fontWeight="500">
                 All rights reserved 2022. Optimal N Max LLC.
               </Text>
             </Stack>
           </Flex>
         </Stack>
-        <Flex>
+        <Flex display={{ md: "flex" }}>
           <Spacer />
-          <Stack pt="71px" pb="47px">
-            <Flex pb="37px">
+          <Stack
+            pt={{ base: "15px", sm: "25px", md: "71px", "2xl": "71px" }}
+            pb={{ base: "15px", sm: "0px", md: "25px", "2xl": "47px" }}
+          >
+            <Flex pb="17px">
               <IconButton
                 variant="outline"
                 colorScheme="white"
@@ -53,11 +56,11 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px">
+              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
                 99999999
               </Link>
             </Flex>
-            <Flex pb="37px">
+            <Flex pb="17px">
               <IconButton
                 variant="outline"
                 colorScheme="white"
@@ -69,7 +72,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px">
+              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
                 habido@optimal.mn
               </Link>
             </Flex>
@@ -85,14 +88,17 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px" width="226px">
+              <Link href="#" fontFamily="SFProRounded" fontSize="20px" width="226px" textColor="#424852" height="40px">
                 ХУД, 18-р хороо LS Plaza 8 давхар 801 тоот
               </Link>
             </Flex>
           </Stack>
           <Spacer />
-          <Stack pt="71px" pb="47px">
-            <Flex pb="37px">
+          <Stack
+            pt={{ base: "15px", sm: "25px", md: "71px", "2xl": "71px" }}
+            pb={{ base: "15px", sm: "20px", md: "25px", "2xl": "47px" }}
+          >
+            <Flex pb="17px">
               <IconButton
                 variant="outline"
                 colorScheme="white"
@@ -104,11 +110,11 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px">
+              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
                 Follow us on
               </Link>
             </Flex>
-            <Flex pb="37px">
+            <Flex pb="17px">
               <IconButton
                 variant="outline"
                 colorScheme="white"
@@ -120,7 +126,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px">
+              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
                 Like us on
               </Link>
             </Flex>
@@ -136,7 +142,7 @@ export default function LargeWithLogoLeft() {
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize="20px">
+              <Link href="#" fontFamily="SFProRounded" fontSize="20px" textColor="#424852" height="40px">
                 Subscribe us on
               </Link>
             </Flex>
