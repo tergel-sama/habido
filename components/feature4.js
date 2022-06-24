@@ -1,31 +1,31 @@
 /* eslint-disable react/button-has-type */
-import { chakra, Box, Flex, SimpleGrid, Image, Button } from "@chakra-ui/react";
+import { chakra, Box, Flex, Image, Button } from "@chakra-ui/react";
 import { AiFillAndroid } from "react-icons/ai";
 import { SiApple, SiHuawei } from "react-icons/si";
 import HeroImage from "../assets/img/feature4.png";
 
 export default function Feature4() {
   return (
-    <SimpleGrid
-      columns={{ base: 1, md: 2 }}
-      spacing={0}
+    <Flex
       h="100vh"
       bg="#f4f6f8"
-      overflow="hidden"
-      _after={{
-        opacity: 0.25,
-        pos: "absolute",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        zIndex: -1,
-        content: '" "',
-      }}
+      flexDir={{ base: "column-reverse", md: "row" }}
+      // overflow="hidden"
+      // _after={{
+      //   opacity: 0.25,
+      //   pos: "absolute",
+      //   top: 0,
+      //   left: 0,
+      //   bottom: 0,
+      //   right: 0,
+      //   zIndex: -1,
+      //   content: '" "',
+      // }}
     >
       <Flex
+        // direction={{ md: "column", base: "row-reverse" }}
         direction="column"
-        alignItems="start"
+        alignItems="center"
         justifyContent="space-around"
         pl={{ base: 4, md: 12, "2xl": "15rem" }}
       >
@@ -38,10 +38,10 @@ export default function Feature4() {
             fontSize={{ base: "4xl", md: "4xl", lg: "55px" }}
             lineHeight="normal"
           >
-            <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа </span> <br />
-            <span className="text-[#fa6c51]">татаарай</span>
+            <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа татаарай</span> <br />
+            {/* <span className="text-[#fa6c51]"></span> */}
           </chakra.h1>
-          <Flex justifyContent="flex-start" alignItems="start" flexDirection={{ base: "column", md: "row" }}>
+          <Flex mb={5} flexDir={{ base: "column", md: "row" }}>
             <Button borderRadius={13} m={1}>
               <Box color="gray.400" margin={1}>
                 <SiApple size={22} />
@@ -66,6 +66,6 @@ export default function Feature4() {
       <Box>
         <Image src={HeroImage?.src} alt="holding phone" fit="scale-down" w="full" h={{ md: "full" }} loading="lazy" />
       </Box>
-    </SimpleGrid>
+    </Flex>
   );
 }
