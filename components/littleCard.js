@@ -1,7 +1,5 @@
 import { Box, HStack, Image, Text } from "@chakra-ui/react";
 
-// import IconsTest from "../assets/icons/book.svg";
-
 export default function LittleCard({ data }) {
   return (
     <HStack
@@ -14,7 +12,7 @@ export default function LittleCard({ data }) {
         <Image src={data.img} />
       </Box>
       <Box>
-        <Text lineHeight="normal" fontWeight={500} fontFamily="SFProRounded" fontSize="13px">
+        <Text pr="2px" lineHeight="normal" fontWeight={500} fontFamily="SFProRounded" fontSize="13px">
           {data.title}
         </Text>
       </Box>

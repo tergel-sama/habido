@@ -1,4 +1,8 @@
-import { Box, chakra, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Box, chakra, Flex, SimpleGrid, UnorderedList, ListItem, Image, Text } from "@chakra-ui/react";
+
+import chatbotImg from "../assets/img/chatbot-web.png";
+import habitwebImg from "../assets/img/habit-web.png";
+import medremjImg from "../assets/img/medremj-web.png";
 
 export default function App() {
   return (
@@ -11,7 +15,7 @@ export default function App() {
           spacingY={{ base: 10, md: 32 }}
           spacingX={{ base: 10, md: 24 }}
         >
-          <Box>
+          <Box m="auto">
             <chakra.h2
               mb={4}
               fontFamily="SFProRounded"
@@ -21,7 +25,7 @@ export default function App() {
               fontWeight={300}
               textAlign={{ base: "center", md: "left" }}
             >
-              Чатбот той холбогдож ярилцах боломж
+              Чатботтой ярилцан бодол мэдрэмжээ хуваалцах
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -31,11 +35,28 @@ export default function App() {
               lineHeight="1.39"
               fontSize={{ md: "18px" }}
             >
-              Handle your subscriptions and transactions efficiently with the clear overview in Dashboard. Features like
-              the smart search option allow you to quickly find any data you’re looking for.
+              <UnorderedList color="#fa6c51">
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">Сэтгэл зүйн байдлаа автомат чатботтой 24/7 хуваалцаарай.</Text>
+                </ListItem>
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Мэдрэмжээ илэрхийлэх, өөрт тулгарч буй асуудлаа хуваалцах болон сэтгэл зүйн мэдээллүүдийг авах
+                    боломжтой.
+                  </Text>
+                </ListItem>
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Мэдрэмжээ илэрхийлэх, өөрт тулгарч буй асуудлаа хуваалцах болон сэтгэл зүйн мэдээллүүдийг авах
+                    боломжтой.
+                  </Text>
+                </ListItem>
+              </UnorderedList>
             </chakra.p>
           </Box>
-          <Box w="full" h="full" py={48} />
+          <Box w="full" h="full">
+            <Image src={chatbotImg?.src} />
+          </Box>
         </SimpleGrid>
         <SimpleGrid
           alignItems="center"
@@ -55,7 +76,7 @@ export default function App() {
               fontWeight={300}
               textAlign={{ base: "center", md: "left" }}
             >
-              Мэдрэмжээ тэмдэглэх боломж
+              Мэдрэмжээ тэмдэглэн бүртгэх
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -65,11 +86,32 @@ export default function App() {
               lineHeight="1.39"
               fontSize={{ md: "18px" }}
             >
-              Handle your subscriptions and transactions efficiently with the clear overview in Dashboard. Features like
-              the smart search option allow you to quickly find any data you’re looking for.
+              <UnorderedList color="#fa6c51">
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Өдөр бүр голлон төрж буй мэдрэмжээ, түүнийг үүсгэж буй шалтгааны хамт тэмдэглэх. Жиш: “санаа зовох,
+                    шалгалтаас болоод” “гэмших, гэрээ цэвэрлээгүйгээс болоод” гэх мэт.
+                  </Text>
+                </ListItem>
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Тухайн сард танд голлон төрсөн мэдрэмжүүд болон тэдгээрийн шалтгааныг нэгдсэн графикаар харах
+                    боломжтой ба энэ нь таныг өөрийгөө илүү ойлгож, өөр дээрээ ажиллахад туслах болно.
+                  </Text>
+                </ListItem>
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Өөрт төрдөг мэдрэмжүүдээ ялган таньж, тэдгээрийг үүсгэж буй шалтгаануудыг тэмдэглэх нь ялангуяа
+                    таагүй мэдрэмж дахин төрөхөөс сэргийлэх, эсвэл тухайн үед хэрхэн тайвшрах вэ гэдгийг таних боломжийг
+                    олгоно.
+                  </Text>
+                </ListItem>
+              </UnorderedList>
             </chakra.p>
           </Box>
-          <Box w="full" h="full" py={48} />
+          <Box w="full" h="full">
+            <Image src={medremjImg?.src} />
+          </Box>
         </SimpleGrid>
         <SimpleGrid
           alignItems="start"
@@ -78,7 +120,7 @@ export default function App() {
           spacingY={{ base: 10, md: 32 }}
           spacingX={{ base: 10, md: 24 }}
         >
-          <Box>
+          <Box m="auto">
             <chakra.h2
               mb={4}
               fontFamily="SFProRounded"
@@ -88,7 +130,7 @@ export default function App() {
               fontWeight={300}
               textAlign={{ base: "center", md: "left" }}
             >
-              Дадал төлөвлөх, хэвшүүлэх
+              Дадал зуршил хэвшүүлэх
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -98,11 +140,33 @@ export default function App() {
               lineHeight="1.39"
               fontSize={{ md: "18px" }}
             >
-              Handle your subscriptions and transactions efficiently with the clear overview in Dashboard. Features like
-              the smart search option allow you to quickly find any data you’re looking for.
+              <UnorderedList color="#fa6c51">
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    36 дадлаас өөрийн хүссэнийг сонгон мөн шинээр үүсгэн хэвшүүлэх боломжтой.
+                  </Text>
+                </ListItem>
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Тухайн дадлыг хэвшүүлэхийг сануулах цаг тохируулах боломжтой тул мартахаас сэргийлнэ.
+                  </Text>
+                </ListItem>
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Тухайн өдөрт хийх дадлын жагсаалт болон өмнөх түүхээ харах бололцоотой.
+                  </Text>
+                </ListItem>
+                <ListItem mb="0.7rem">
+                  <Text textColor="#424852">
+                    Гүйцэтгэлийг тоон үзүүлэлтээр харуулах тул ахиц дэвшлээ харан өөртөө үнэлэлт дүгнэлт өгөх боломжтой.
+                  </Text>
+                </ListItem>
+              </UnorderedList>
             </chakra.p>
           </Box>
-          <Box w="full" h="full" py={48} />
+          <Box w="full" h="full">
+            <Image src={habitwebImg?.src} />
+          </Box>
         </SimpleGrid>
       </Box>
     </Flex>

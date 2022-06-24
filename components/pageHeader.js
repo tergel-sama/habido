@@ -2,7 +2,7 @@ import { Flex, Box, InputGroup, InputLeftElement, Input, Text, Spacer, Select, I
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
 
-export default function PageHeader() {
+export default function PageHeader({ tags, setSearchText, setName }) {
   return (
     <Flex alignItems="center" justifyContent="space-between" borderWidth={0} overflowX="auto">
       <Text mr={12} fontFamily="SFProRounded" fontSize="55px" fontWeight={900} color="#424852">
@@ -19,10 +19,12 @@ export default function PageHeader() {
           borderRadius="15px"
           h="53px"
           placeholder="Хайлт..."
+          onChange={(e) => setSearchText(e.target.value)}
         />
       </InputGroup>
       <Spacer />
       <Select
+        display={{ base: "none", sm: "block" }}
         fontFamily="SFProRounded"
         fontSize="18px"
         border="solid 3px #f4f6f8"
@@ -30,10 +32,13 @@ export default function PageHeader() {
         w="185px"
         h="53px"
         placeholder="Ангилах"
+        onChange={(e) => setName(e.target.value)}
       >
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
+        {tags?.map((item, index) => (
+          <option key={index} value={item.name}>
+            {item.name}
+          </option>
+        ))}
       </Select>
       <Box display={{ base: "none", xl: "block" }}>
         <IconButton ml="6" h="53px" w="53px" borderRadius={30} icon={<FiFilter size={20} />} />
