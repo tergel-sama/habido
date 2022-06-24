@@ -64,14 +64,7 @@ export default function Feature4() {
         </Box>
       </Flex>
       <Box>
-        <Image
-          src={HeroImage?.src}
-          alt="holding phone"
-          fit="cover"
-          w="full"
-          h={{ base: 64, md: "full" }}
-          loading="lazy"
-        />
+        <Image src={HeroImage?.src} alt="holding phone" fit="scale-down" w="full" h={{ md: "full" }} loading="lazy" />
       </Box>
     </SimpleGrid>
   );
