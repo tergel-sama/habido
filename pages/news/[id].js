@@ -1,6 +1,17 @@
 import { chakra, Box, Flex, Text, Button, Image } from "@chakra-ui/react";
+import useSWR from "swr";
+import { useRouter } from "next/router";
+
+const fetcher = (url) => fetch(url).then((result) => result.json());
 
 export default function News() {
+  const router = useRouter();
+  const { id } = router.query;
+  const { data: contentData, error } = useSWR(`http://192.168.2.21:8041/web/content/${id}`, fetcher);
+
+  if (error) return <div>failed to load</div>;
+  if (!contentData) return <div>loading...</div>;
+
   return (
     <Box>
       <Flex minH="100px" py={{ base: 0 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">

@@ -1,8 +1,10 @@
 import { Box, Heading, Text, Stack, Image, Flex, Spacer } from "@chakra-ui/react";
 import { AiOutlineClockCircle, AiOutlineEye } from "react-icons/ai";
+import { useRouter } from "next/router";
 import ReactHtmlParser from "react-html-parser";
 
 export default function blogPostWithImage({ data }) {
+  const router = useRouter();
   return (
     <Box
       position="relative"
@@ -16,6 +18,8 @@ export default function blogPostWithImage({ data }) {
       overflow="hidden"
       display="flex"
       flexDir="column"
+      cursor="pointer"
+      onClick={() => router.push(`/news/${data.contentId}`)}
     >
       <Box position="relative">
         <Image overflow="hidden" borderRadius="15px" h="200px" w="full" src={data?.contentPhoto} objectFit="cover" />
