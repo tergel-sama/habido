@@ -45,7 +45,7 @@ export default function LargeWithLogoLeft() {
           <Stack
             pt={{ base: "15px", sm: "25px", md: "40px", "2xl": "71px" }}
             pb={{ base: "15px", sm: "0px", md: "25px", "2xl": "47px" }}
-            marginLeft={{ base: "40px", md: "revert" }}
+            marginLeft={{ base: "30px", md: "revert" }}
           >
             <Flex pb="17px">
               <IconButton
@@ -138,7 +138,7 @@ export default function LargeWithLogoLeft() {
           </Stack>
           <Spacer />
           <Stack
-            marginRight={{ base: "40px", md: "revert" }}
+            marginRight={{ base: "30px", md: "revert" }}
             pt={{ base: "15px", sm: "25px", md: "40px", "2xl": "71px" }}
             pb={{ base: "15px", sm: "20px", md: "25px", "2xl": "47px" }}
           >
