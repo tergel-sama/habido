@@ -45,6 +45,7 @@ export default function LargeWithLogoLeft() {
           <Stack
             pt={{ base: "15px", sm: "25px", md: "40px", "2xl": "71px" }}
             pb={{ base: "15px", sm: "0px", md: "25px", "2xl": "47px" }}
+            marginLeft={{ base: "40px", md: "revert" }}
           >
             <Flex pb="17px">
               <IconButton
@@ -57,12 +58,12 @@ export default function LargeWithLogoLeft() {
                 rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
-                h={{ base: "20px", md: "30px", "2xl": "40px" }}
-                w={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                h={{ base: "25px", md: "30px", "2xl": "40px" }}
+                w={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "25px", md: "30px", "2xl": "40px" }}
               />
               <Link
                 href="#"
@@ -70,6 +71,7 @@ export default function LargeWithLogoLeft() {
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
                 textColor="#424852"
                 height="40px"
+                pt="3px"
               >
                 99999999
               </Link>
@@ -85,12 +87,12 @@ export default function LargeWithLogoLeft() {
                 rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
-                h={{ base: "20px", md: "30px", "2xl": "40px" }}
-                w={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                h={{ base: "25px", md: "30px", "2xl": "40px" }}
+                w={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "25px", md: "30px", "2xl": "40px" }}
               />
               <Link
                 href="#"
@@ -98,6 +100,7 @@ export default function LargeWithLogoLeft() {
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
                 textColor="#424852"
                 height="40px"
+                pt="3px"
               >
                 habido@optimal.mn
               </Link>
@@ -111,12 +114,12 @@ export default function LargeWithLogoLeft() {
                 fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
                 icon={<GoLocation color="white" />}
                 rounded="full"
-                h={{ base: "20px", md: "30px", "2xl": "40px" }}
-                w={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                h={{ base: "25px", md: "30px", "2xl": "40px" }}
+                w={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
@@ -127,6 +130,7 @@ export default function LargeWithLogoLeft() {
                 width={{ base: "120px", md: "150px", "2xl": "226px" }}
                 textColor="#424852"
                 height="40px"
+                pt="3px"
               >
                 ХУД, 18-р хороо LS Plaza 8 давхар 801 тоот
               </Link>
@@ -134,6 +138,7 @@ export default function LargeWithLogoLeft() {
           </Stack>
           <Spacer />
           <Stack
+            marginRight={{ base: "40px", md: "revert" }}
             pt={{ base: "15px", sm: "25px", md: "40px", "2xl": "71px" }}
             pb={{ base: "15px", sm: "20px", md: "25px", "2xl": "47px" }}
           >
@@ -148,12 +153,12 @@ export default function LargeWithLogoLeft() {
                 borderColor="#fa6c51"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
-                h={{ base: "20px", md: "30px", "2xl": "40px" }}
-                w={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                h={{ base: "25px", md: "30px", "2xl": "40px" }}
+                w={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "25px", md: "30px", "2xl": "40px" }}
               />
               <Link
                 href="#"
@@ -161,6 +166,7 @@ export default function LargeWithLogoLeft() {
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
                 textColor="#424852"
                 height="40px"
+                pt="3px"
               >
                 Follow us on
               </Link>
@@ -176,12 +182,12 @@ export default function LargeWithLogoLeft() {
                 rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
-                h={{ base: "20px", md: "30px", "2xl": "40px" }}
-                w={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                h={{ base: "25px", md: "30px", "2xl": "40px" }}
+                w={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "25px", md: "30px", "2xl": "40px" }}
               />
               <Link
                 href="#"
@@ -189,6 +195,7 @@ export default function LargeWithLogoLeft() {
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
                 textColor="#424852"
                 height="40px"
+                pt="3px"
               >
                 Like us on
               </Link>
@@ -204,12 +211,12 @@ export default function LargeWithLogoLeft() {
                 rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
-                h={{ base: "20px", md: "30px", "2xl": "40px" }}
-                w={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
-                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                h={{ base: "25px", md: "30px", "2xl": "40px" }}
+                w={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "25px", md: "30px", "2xl": "40px" }}
               />
               <Link
                 href="#"
@@ -217,25 +224,35 @@ export default function LargeWithLogoLeft() {
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
                 textColor="#424852"
                 height="40px"
+                pt="3px"
               >
                 Subscribe us on
               </Link>
             </Flex>
           </Stack>
         </Flex>
-        <Flex>
+        <Stack>
           <Text
             fontFamily="SFProRounded"
             fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
             textColor="#424852"
             fontWeight="500"
-            mt={{ base: "20px", sm: "-40px", md: " -40px", "2xl": "-50px" }}
+            mt={{ base: "30px", sm: "-50px", md: " -60px", "2xl": "-80px" }}
             width="100%"
             textAlign={{ base: "center", sm: "revert" }}
           >
             All rights reserved 2022. Optimal N Max LLC.
           </Text>
-        </Flex>
+          <Text
+            textAlign={{ base: "center", sm: "revert" }}
+            fontFamily="SFProRounded"
+            fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+            textColor="#424852"
+            fontWeight="500"
+          >
+            Powered By <strong>TanaSoft</strong>
+          </Text>
+        </Stack>
       </SimpleGrid>
     </Box>
   );

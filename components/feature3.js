@@ -225,7 +225,7 @@ const habit2 = [
 
 export default function Feature3() {
   return (
-    <Box py="58px" pl={{ base: 4, md: 12, "2xl": "15rem" }}>
+    <Box pt="58px" pl={{ base: 4, md: 12, "2xl": "15rem" }}>
       <Text
         w="522px"
         lineHeight="normal"

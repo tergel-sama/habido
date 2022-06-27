@@ -36,7 +36,7 @@ export default function App() {
           fontSize={{ base: "4xl", md: "4xl", lg: "55px" }}
           lineHeight="normal"
         >
-          <span className="text-[#fa6c51]"> HabiDo </span> аппликейшнаа <br /> татаад {"  "}
+          <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа </span> <br /> татаад {"  "}
           <span className="text-[#fa6c51]">
             амьдралын <br /> чанараа дээшлүүл
           </span>
