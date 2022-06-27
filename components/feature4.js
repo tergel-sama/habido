@@ -1,29 +1,13 @@
-/* eslint-disable react/button-has-type */
 import { chakra, Box, Flex, Image, Button } from "@chakra-ui/react";
 import { AiFillAndroid } from "react-icons/ai";
 import { SiApple, SiHuawei } from "react-icons/si";
+
 import HeroImage from "../assets/img/feature4.png";
 
 export default function Feature4() {
   return (
-    <Flex
-      h="100vh"
-      bg="#f4f6f8"
-      flexDir={{ base: "column-reverse", md: "row" }}
-      // overflow="hidden"
-      // _after={{
-      //   opacity: 0.25,
-      //   pos: "absolute",
-      //   top: 0,
-      //   left: 0,
-      //   bottom: 0,
-      //   right: 0,
-      //   zIndex: -1,
-      //   content: '" "',
-      // }}
-    >
+    <Flex h="100vh" bg="#f4f6f8" flexDir={{ base: "column-reverse", md: "row" }}>
       <Flex
-        // direction={{ md: "column", base: "row-reverse" }}
         direction="column"
         alignItems="center"
         justifyContent="space-around"
@@ -39,7 +23,6 @@ export default function Feature4() {
             lineHeight="normal"
           >
             <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа татаарай</span> <br />
-            {/* <span className="text-[#fa6c51]"></span> */}
           </chakra.h1>
           <Flex mb={5} flexDir={{ base: "column", md: "row" }}>
             <Button borderRadius={13} m={1}>
