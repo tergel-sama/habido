@@ -13,35 +13,37 @@ export default function LargeWithLogoLeft() {
       width="100%"
       backgroundColor="#f4f6f8"
       minH="100px"
-      py={{ base: 0 }}
       px={{ base: 4, md: 12, "2xl": "15rem" }}
       borderStyle="solid"
     >
-      <SimpleGrid templateColumns={{ sm: "1fr 1fr", md: "1fr 1fr" }}>
+      <SimpleGrid templateColumns={{ sm: "1fr 1fr", md: "1fr 1fr", "2xl": "1fr 1fr" }}>
         <Stack>
-          <Flex pt="71px" pb="39px">
-            <Stack>
-              <Box pb="24.3px">
+          <Flex pt={{ base: "30px", md: " 40px", "2xl": "71px" }} pb={{ base: "19px", md: "25px", "2xl": "39px" }}>
+            <Stack width="100%">
+              <Box pb="24.3px" margin={{ base: "auto", sm: "revert" }}>
                 <Image src={Logo?.src} />
               </Box>
-              <Flex>
-                <Text fontFamily="SFProRounded" fontSize="20px" pb="58px" textColor="#424852">
+
+              <Flex textAlign={{ base: "center", sm: "revert" }}>
+                <Text
+                  fontFamily="SFProRounded"
+                  fontSize="20px"
+                  width="100%"
+                  pb={{ base: "22px", md: "55px", "2xl": "66px" }}
+                  textColor="#424852"
+                >
                   <strong>
                     Happy <span>&#8226;</span> Habit <span>&#8226;</span> Do
                   </strong>
                 </Text>
               </Flex>
-              <Spacer />
-              <Text fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" fontWeight="500">
-                All rights reserved 2022. Optimal N Max LLC.
-              </Text>
             </Stack>
           </Flex>
         </Stack>
-        <Flex display={{ md: "flex" }}>
-          <Spacer />
+        <Flex>
+          <Box flex={{ base: 0, md: 1 }} />
           <Stack
-            pt={{ base: "15px", sm: "25px", md: "71px", "2xl": "71px" }}
+            pt={{ base: "15px", sm: "25px", md: "40px", "2xl": "71px" }}
             pb={{ base: "15px", sm: "0px", md: "25px", "2xl": "47px" }}
           >
             <Flex pb="17px">
@@ -49,14 +51,26 @@ export default function LargeWithLogoLeft() {
                 variant="outline"
                 colorScheme="white"
                 aria-label="call sage"
-                fontSize="20px"
+                fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
                 borderColor="#fa6c51"
                 icon={<BsTelephone color="white" />}
-                borderRadius="50px"
+                rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
+                h={{ base: "20px", md: "30px", "2xl": "40px" }}
+                w={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
+              <Link
+                href="#"
+                fontFamily="SFProRounded"
+                fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+                textColor="#424852"
+                height="40px"
+              >
                 99999999
               </Link>
             </Flex>
@@ -64,15 +78,27 @@ export default function LargeWithLogoLeft() {
               <IconButton
                 variant="outline"
                 colorScheme="white"
-                aria-label="call sage"
-                fontSize="20px"
+                aria-label="mail"
+                fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
                 borderColor="#fa6c51"
                 icon={<AiOutlineMail color="white" />}
-                borderRadius="50px"
+                rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
+                h={{ base: "20px", md: "30px", "2xl": "40px" }}
+                w={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
+              <Link
+                href="#"
+                fontFamily="SFProRounded"
+                fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+                textColor="#424852"
+                height="40px"
+              >
                 habido@optimal.mn
               </Link>
             </Flex>
@@ -81,36 +107,61 @@ export default function LargeWithLogoLeft() {
                 variant="outline"
                 borderColor="#fa6c51"
                 colorScheme="white"
-                aria-label="call sage"
-                fontSize="20px"
+                aria-label="location"
+                fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
                 icon={<GoLocation color="white" />}
-                borderRadius="50px"
+                rounded="full"
+                h={{ base: "20px", md: "30px", "2xl": "40px" }}
+                w={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
                 backgroundColor="#fa6c51"
                 marginRight="10px"
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} width="226px" textColor="#424852" height="40px">
+              <Link
+                href="#"
+                fontFamily="SFProRounded"
+                fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+                width={{ base: "120px", md: "150px", "2xl": "226px" }}
+                textColor="#424852"
+                height="40px"
+              >
                 ХУД, 18-р хороо LS Plaza 8 давхар 801 тоот
               </Link>
             </Flex>
           </Stack>
           <Spacer />
           <Stack
-            pt={{ base: "15px", sm: "25px", md: "71px", "2xl": "71px" }}
+            pt={{ base: "15px", sm: "25px", md: "40px", "2xl": "71px" }}
             pb={{ base: "15px", sm: "20px", md: "25px", "2xl": "47px" }}
           >
             <Flex pb="17px">
               <IconButton
                 variant="outline"
                 colorScheme="white"
-                aria-label="call sage"
-                fontSize="20px"
+                aria-label="instagram"
+                fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
                 icon={<AiOutlineInstagram color="white" />}
-                borderRadius="50px"
+                rounded="full"
                 borderColor="#fa6c51"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
+                h={{ base: "20px", md: "30px", "2xl": "40px" }}
+                w={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px",md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
+              <Link
+                href="#"
+                fontFamily="SFProRounded"
+                fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+                textColor="#424852"
+                height="40px"
+              >
                 Follow us on
               </Link>
             </Flex>
@@ -118,15 +169,27 @@ export default function LargeWithLogoLeft() {
               <IconButton
                 variant="outline"
                 colorScheme="white"
-                aria-label="call sage"
+                aria-label="fb"
                 borderColor="#fa6c51"
-                fontSize="20px"
+                fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
                 icon={<FiFacebook color="white" />}
-                borderRadius="50px"
+                rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
+                h={{ base: "20px", md: "30px", "2xl": "40px" }}
+                w={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px", md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
+              <Link
+                href="#"
+                fontFamily="SFProRounded"
+                fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+                textColor="#424852"
+                height="40px"
+              >
                 Like us on
               </Link>
             </Flex>
@@ -134,19 +197,44 @@ export default function LargeWithLogoLeft() {
               <IconButton
                 variant="outline"
                 colorScheme="white"
-                aria-label="call sage"
-                fontSize="20px"
+                aria-label="youtube"
+                fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
                 borderColor="#fa6c51"
                 icon={<AiOutlineYoutube color="white" />}
-                borderRadius="50px"
+                rounded="full"
                 backgroundColor="#fa6c51"
                 marginRight="10px"
+                h={{ base: "20px", md: "30px", "2xl": "40px" }}
+                w={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "20px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "20px", md: "30px", "2xl": "40px" }}
               />
-              <Link href="#" fontFamily="SFProRounded" fontSize={{base : "13px", md : "13px","2xl":"20px"}} textColor="#424852" height="40px">
+              <Link
+                href="#"
+                fontFamily="SFProRounded"
+                fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+                textColor="#424852"
+                height="40px"
+              >
                 Subscribe us on
               </Link>
             </Flex>
           </Stack>
+        </Flex>
+        <Flex>
+          <Text
+            fontFamily="SFProRounded"
+            fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+            textColor="#424852"
+            fontWeight="500"
+            mt={{ base: "20px", sm: "-40px", md: " -40px", "2xl": "-50px" }}
+            width="100%"
+            textAlign={{ base: "center", sm: "revert" }}
+          >
+            All rights reserved 2022. Optimal N Max LLC.
+          </Text>
         </Flex>
       </SimpleGrid>
     </Box>

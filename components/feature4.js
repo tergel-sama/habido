@@ -30,7 +30,7 @@ export default function Feature4() {
             asdasd
           </chakra.p>
         </Box>
-        <Box mt="auto" w="full" h="full">
+        <Box mt="auto" w="full   " h="full">
           <Image w="full" src={feature4Img?.src} />
         </Box>
       </Stack>

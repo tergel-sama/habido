@@ -4,7 +4,7 @@ export default function News() {
   return (
     <Box>
       <Flex minH="100px" py={{ base: 0 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">
-        <Box marginTop="125px">
+        <Box marginTop={{ base: "20px", md: "50px", "2xl": "125px" }}>
           <chakra.h1
             mb="10px"
             fontFamily="SFProRounded"
@@ -36,14 +36,16 @@ export default function News() {
             backgroundColor="#ffffff"
             textColor="#424852"
             fontFamily="SFProRounded"
-            fontSize={{base: "10px", sm: "12px", md: "15px", "2xl": "18px"}}
+            fontSize={{ base: "10px", sm: "12px", md: "15px", "2xl": "18px" }}
             borderRadius="10px"
             position="absolute"
             left={{ base: "15px", sm: "20px", md: "25px", "2xl": "41px" }}
             top={{ base: "15px", sm: "20px", md: "25px", "2xl": "31px" }}
             z-index="-1"
             height="auto"
-            width = "auto"
+            width="auto"
+            padding="10px"
+            cursor="auto"
           >
             Сэтгэл зүй
           </Button>
