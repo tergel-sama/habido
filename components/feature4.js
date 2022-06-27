@@ -1,39 +1,71 @@
-import { Box, chakra, Stack, Image } from "@chakra-ui/react";
-
-import feature4Img from "../assets/img/feature4.png";
+/* eslint-disable react/button-has-type */
+import { chakra, Box, Flex, Image, Button } from "@chakra-ui/react";
+import { AiFillAndroid } from "react-icons/ai";
+import { SiApple, SiHuawei } from "react-icons/si";
+import HeroImage from "../assets/img/feature4.png";
 
 export default function Feature4() {
   return (
-    <Box h="100vh" pl={{ base: 4, md: 12, "2xl": "15rem" }} mx="auto">
-      <Stack display="flex" spacing={8} direction="row">
-        <Box my="auto">
-          <chakra.h2
-            mb={4}
+    <Flex
+      h="100vh"
+      bg="#f4f6f8"
+      flexDir={{ base: "column-reverse", md: "row" }}
+      // overflow="hidden"
+      // _after={{
+      //   opacity: 0.25,
+      //   pos: "absolute",
+      //   top: 0,
+      //   left: 0,
+      //   bottom: 0,
+      //   right: 0,
+      //   zIndex: -1,
+      //   content: '" "',
+      // }}
+    >
+      <Flex
+        // direction={{ md: "column", base: "row-reverse" }}
+        direction="column"
+        alignItems="center"
+        justifyContent="space-around"
+        pl={{ base: 4, md: 12, "2xl": "15rem" }}
+      >
+        <Box />
+        <Box>
+          <chakra.h1
             fontFamily="SFProRounded"
-            fontSize={{ base: "2xl", md: "55px" }}
+            mb={6}
+            fontWeight={300}
+            fontSize={{ base: "4xl", md: "4xl", lg: "55px" }}
             lineHeight="normal"
-            w="550px"
-            textColor="#fa6c51"
-            fontWeight={300}
-            textAlign={{ base: "center", md: "left" }}
           >
-            Яг одоо аппликейшнээ татаарай
-          </chakra.h2>
-          <chakra.p
-            mb={5}
-            textAlign={{ base: "center", sm: "left" }}
-            fontFamily="SFProRounded"
-            fontWeight={300}
-            lineHeight="1.39"
-            fontSize={{ md: "18px" }}
-          >
-            asdasd
-          </chakra.p>
+            <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа татаарай</span> <br />
+            {/* <span className="text-[#fa6c51]"></span> */}
+          </chakra.h1>
+          <Flex mb={5} flexDir={{ base: "column", md: "row" }}>
+            <Button borderRadius={13} m={1}>
+              <Box color="gray.400" margin={1}>
+                <SiApple size={22} />
+              </Box>{" "}
+              App Store
+            </Button>
+            <Button borderRadius={13} m={1}>
+              <Box color="green.400" margin={1}>
+                <AiFillAndroid size={25} />
+              </Box>{" "}
+              Google Play
+            </Button>
+            <Button borderRadius={13} m={1}>
+              <Box color="red.600" margin={1}>
+                <SiHuawei size={25} />
+              </Box>{" "}
+              AppGallery
+            </Button>
+          </Flex>
         </Box>
-        <Box mt="auto" w="full" h="full">
-          <Image w="full" src={feature4Img?.src} />
-        </Box>
-      </Stack>
-    </Box>
+      </Flex>
+      <Box>
+        <Image src={HeroImage?.src} alt="holding phone" fit="scale-down" w="full" h={{ md: "full" }} loading="lazy" />
+      </Box>
+    </Flex>
   );
 }

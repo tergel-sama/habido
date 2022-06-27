@@ -5,6 +5,7 @@ import Feature2 from "../components/feature2";
 import Feature3 from "../components/feature3";
 import Feature4 from "../components/feature4";
 import YoutubeEmbed from "../components/viewport";
+// import Feature4 from "../components/feature4";
 
 const FeatureWithNoSSR = dynamic(() => import("../components/feature"), { ssr: false });
 
