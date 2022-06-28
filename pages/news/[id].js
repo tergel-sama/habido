@@ -9,10 +9,17 @@ export default function News() {
   const router = useRouter();
   const { id } = router.query;
   const { data: contentData, error } = useSWR(`http://192.168.2.21:8041/web/content/${id}`, fetcher);
+  const isodate = contentData?.auditLog?.createdAt;
+  const date = [];
 
+  let time = "";
+  if (isodate !== undefined) {
+    date.push(isodate.split("T")[0]);
+    date.push(isodate.split("T")[1].split(":", 2).join(":"));
+    time = date.join(", ");
+  }
   if (error) return <div>failed to load</div>;
   if (!contentData) return <div>loading...</div>;
-
   return (
     <Box>
       <Flex minH="100px" py={{ base: 0 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">
@@ -26,7 +33,7 @@ export default function News() {
             fontWeight={500}
             textAlign={{ md: "left" }}
           >
-            Нийтэлсэн: 2022.03.05, 15:00 | {contentData?.readTime} минут уншина
+            Нийтэлсэн: {time} | {contentData?.readTime} минут уншина
           </chakra.h1>
           <chakra.h1
             mb="30px"
@@ -59,7 +66,7 @@ export default function News() {
             padding="10px"
             cursor="auto"
           >
-            {contentData?.tags[0].name}
+            {contentData?.tags[0]?.name}
           </Button>
         </Box>
       </Flex>

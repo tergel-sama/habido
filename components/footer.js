@@ -250,7 +250,10 @@ export default function LargeWithLogoLeft() {
             textColor="#424852"
             fontWeight="500"
           >
-            Powered By <strong>TanaSoft</strong>
+            Powered By{" "}
+            <a href="https://tanasoft.mn/" target="_blank" rel="noreferrer">
+              <strong>TanaSoft</strong>
+            </a>
           </Text>
         </Stack>
       </SimpleGrid>
