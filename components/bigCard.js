@@ -5,6 +5,14 @@ import ReactHtmlParser from "react-html-parser";
 
 export default function blogPostWithImage({ data }) {
   const router = useRouter();
+  const isodate = data?.auditLog?.createdAt;
+  const date = [];
+  let time = "";
+  if (isodate !== undefined) {
+    date.push(isodate.split("T")[0]);
+    date.push(isodate.split("T")[1].split(":", 2).join(":"));
+    time = date.join(", ");
+  }
   return (
     <Box
       position="relative"
@@ -82,7 +90,7 @@ export default function blogPostWithImage({ data }) {
             {data?.view}
           </Text>
           <Spacer />
-          <Text>Нийтэлсэн: 2022.03.01 17:00</Text>
+          <Text>Нийтэлсэн: {time}</Text>
         </Flex>
       </Box>
     </Box>
