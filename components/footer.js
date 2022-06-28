@@ -10,6 +10,7 @@ import Logo from "../assets/img/navbarLogo.png";
 export default function LargeWithLogoLeft() {
   return (
     <Box
+      id="linkScroll"
       width="100%"
       backgroundColor="#f4f6f8"
       minH="100px"

@@ -11,7 +11,6 @@ export default function News() {
   const { data: contentData, error } = useSWR(`http://192.168.2.21:8041/web/content/${id}`, fetcher);
   const isodate = contentData?.auditLog?.createdAt;
   const date = [];
-
   let time = "";
   if (isodate !== undefined) {
     date.push(isodate.split("T")[0]);

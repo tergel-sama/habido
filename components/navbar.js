@@ -1,4 +1,4 @@
-import { Box, Flex, Collapse, Text, IconButton, Button, Stack, useDisclosure, Image } from "@chakra-ui/react";
+import { Box, Flex, Collapse, Text, IconButton, Button, Stack, useDisclosure, Image, Link } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 import LogoImage from "../assets/img/navbarLogo.png";
@@ -22,7 +22,6 @@ export default function WithSubnavigation() {
             <Image src={LogoImage?.src} />
           </Text>
         </Flex>
-
         <Stack
           display={{ base: "none", md: "flex" }}
           flex={{ base: 1, md: 0 }}
@@ -37,7 +36,7 @@ export default function WithSubnavigation() {
             fontWeight={500}
             color="#424852"
             variant="link"
-            href="#"
+            href="advise"
           >
             Зөвлөмж
           </Button>
@@ -50,7 +49,7 @@ export default function WithSubnavigation() {
             variant="link"
             href="#"
           >
-            Холбоо барих
+            <Link href="#linkScroll">Холбоо барих</Link>
           </Button>
           <Button
             display={{ base: "none", md: "inline-flex" }}
