@@ -20,10 +20,10 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "end", md: "start" }}>
-          <Text fontFamily="heading">
-            <a onClick={() => router.push("/")}>
+          <Text fontFamily="heading" cursor="pointer">
+            <Text onClick={() => router.push("/")}>
               <Image src={LogoImage?.src} />
-            </a>
+            </Text>
           </Text>
         </Flex>
         <Stack
@@ -40,7 +40,8 @@ export default function WithSubnavigation() {
             fontWeight={500}
             color="#424852"
             variant="link"
-            href="advise"
+            href="#"
+            onClick={() => router.push("advise")}
           >
             Зөвлөмж
           </Button>
@@ -74,11 +75,19 @@ export default function WithSubnavigation() {
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <Stack flex={{ base: 1, md: 0 }} justify="flex-end" direction="column" spacing={6}>
-          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="link" href="#">
+          <Button
+            fontSize="20px"
+            fontFamily="SfProRounded"
+            fontWeight={500}
+            color="#424852"
+            variant="link"
+            href="#"
+            onClick={() => router.push("advise")}
+          >
             Зөвлөмж
           </Button>
           <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="" href="#">
-            Холбоо барих
+            <a href="#footerScroll">Холбоо барих</a>
           </Button>
           <Button
             alignSelf="center"
@@ -94,7 +103,14 @@ export default function WithSubnavigation() {
             bg="#fa6c51"
             href="#"
           >
-            <span className="h-[25px]">Апп татах</span>
+            <a
+              href="https://play.google.com/store/apps/details?id=mn.app.habido_app"
+              className="h-[25px]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Апп татах
+            </a>
           </Button>
         </Stack>
       </Collapse>

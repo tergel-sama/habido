@@ -32,6 +32,7 @@ export default function LargeWithLogoLeft() {
                   width="100%"
                   pb={{ base: "22px", md: "55px", "2xl": "66px" }}
                   textColor="#424852"
+                  cursor="context-menu"
                 >
                   <strong>
                     Happy <span>&#8226;</span> Habit <span>&#8226;</span> Do
@@ -65,6 +66,7 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                cursor="context-menu"
               />
               <Link
                 href="#"
@@ -73,6 +75,7 @@ export default function LargeWithLogoLeft() {
                 textColor="#424852"
                 height="40px"
                 pt="3px"
+                cursor="context-menu"
               >
                 99999999
               </Link>
@@ -94,6 +97,7 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                cursor="context-menu"
               />
               <Link
                 href="#"
@@ -102,6 +106,7 @@ export default function LargeWithLogoLeft() {
                 textColor="#424852"
                 height="40px"
                 pt="3px"
+                cursor="context-menu"
               >
                 habido@optimal.mn
               </Link>
@@ -123,6 +128,7 @@ export default function LargeWithLogoLeft() {
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 backgroundColor="#fa6c51"
                 marginRight="10px"
+                cursor="context-menu"
               />
               <Link
                 href="#"
@@ -132,6 +138,7 @@ export default function LargeWithLogoLeft() {
                 textColor="#424852"
                 height="40px"
                 pt="3px"
+                cursor="context-menu"
               >
                 ХУД, 18-р хороо LS Plaza 8 давхар 801 тоот
               </Link>
@@ -160,6 +167,7 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                cursor="context-menu"
               />
               <Link
                 href="#"
@@ -168,6 +176,7 @@ export default function LargeWithLogoLeft() {
                 textColor="#424852"
                 height="40px"
                 pt="3px"
+                cursor="context-menu"
               >
                 Follow us on
               </Link>
@@ -189,6 +198,7 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                cursor="context-menu"
               />
               <Link
                 href="#"
@@ -197,6 +207,7 @@ export default function LargeWithLogoLeft() {
                 textColor="#424852"
                 height="40px"
                 pt="3px"
+                cursor="context-menu"
               >
                 Like us on
               </Link>
@@ -218,6 +229,7 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                cursor="context-menu"
               />
               <Link
                 href="#"
@@ -226,6 +238,7 @@ export default function LargeWithLogoLeft() {
                 textColor="#424852"
                 height="40px"
                 pt="3px"
+                cursor="context-menu"
               >
                 Subscribe us on
               </Link>
@@ -241,6 +254,7 @@ export default function LargeWithLogoLeft() {
             mt={{ base: "30px", sm: "-50px", md: " -60px", "2xl": "-80px" }}
             width="100%"
             textAlign={{ base: "center", sm: "revert" }}
+            cursor="context-menu"
           >
             All rights reserved 2022. Optimal N Max LLC.
           </Text>
@@ -250,6 +264,7 @@ export default function LargeWithLogoLeft() {
             fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
             textColor="#424852"
             fontWeight="500"
+            cursor="context-menu"
           >
             Powered By{" "}
             <a href="https://tanasoft.mn/" target="_blank" rel="noreferrer">
