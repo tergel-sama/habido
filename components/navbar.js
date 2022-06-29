@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { Box, Flex, Collapse, Text, IconButton, Button, Stack, useDisclosure, Image } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
@@ -6,8 +5,8 @@ import { useRouter } from "next/router";
 import LogoImage from "../assets/img/navbarLogo.png";
 
 export default function WithSubnavigation() {
-  const { isOpen, onToggle } = useDisclosure();
   const router = useRouter();
+  const { isOpen, onToggle } = useDisclosure();
   return (
     <Box>
       <Flex minH="100px" py={{ base: 2 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">
@@ -20,10 +19,8 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "end", md: "start" }}>
-          <Text fontFamily="heading" cursor="pointer">
-            <Text onClick={() => router.push("/")}>
-              <Image src={LogoImage?.src} />
-            </Text>
+          <Text fontFamily="heading" cursor="pointer" onClick={() => router.push("/")}>
+            <Image src={LogoImage?.src} />
           </Text>
         </Flex>
         <Stack
@@ -41,7 +38,7 @@ export default function WithSubnavigation() {
             color="#424852"
             variant="link"
             href="#"
-            onClick={() => router.push("advise")}
+            onClick={() => router.push("/advise")}
           >
             Зөвлөмж
           </Button>

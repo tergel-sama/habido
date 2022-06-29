@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Box, Link, Stack, Text, Image, SimpleGrid, Spacer, Flex, IconButton } from "@chakra-ui/react";
+import { Box, Stack, Text, Image, SimpleGrid, Spacer, Flex, IconButton } from "@chakra-ui/react";
 import { AiOutlineMail, AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
@@ -68,7 +68,7 @@ export default function LargeWithLogoLeft() {
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 cursor="context-menu"
               />
-              <Link
+              <Text
                 href="#"
                 fontFamily="SFProRounded"
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
@@ -78,7 +78,7 @@ export default function LargeWithLogoLeft() {
                 cursor="context-menu"
               >
                 99999999
-              </Link>
+              </Text>
             </Flex>
             <Flex pb="17px">
               <IconButton
@@ -99,7 +99,7 @@ export default function LargeWithLogoLeft() {
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 cursor="context-menu"
               />
-              <Link
+              <Text
                 href="#"
                 fontFamily="SFProRounded"
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
@@ -109,7 +109,7 @@ export default function LargeWithLogoLeft() {
                 cursor="context-menu"
               >
                 habido@optimal.mn
-              </Link>
+              </Text>
             </Flex>
             <Flex>
               <IconButton
@@ -130,7 +130,7 @@ export default function LargeWithLogoLeft() {
                 marginRight="10px"
                 cursor="context-menu"
               />
-              <Link
+              <Text
                 href="#"
                 fontFamily="SFProRounded"
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
@@ -141,7 +141,7 @@ export default function LargeWithLogoLeft() {
                 cursor="context-menu"
               >
                 ХУД, 18-р хороо LS Plaza 8 давхар 801 тоот
-              </Link>
+              </Text>
             </Flex>
           </Stack>
           <Spacer />
@@ -169,7 +169,7 @@ export default function LargeWithLogoLeft() {
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 cursor="context-menu"
               />
-              <Link
+              <Text
                 href="#"
                 fontFamily="SFProRounded"
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
@@ -179,7 +179,7 @@ export default function LargeWithLogoLeft() {
                 cursor="context-menu"
               >
                 Follow us on
-              </Link>
+              </Text>
             </Flex>
             <Flex pb="17px">
               <IconButton
@@ -200,7 +200,7 @@ export default function LargeWithLogoLeft() {
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 cursor="context-menu"
               />
-              <Link
+              <Text
                 href="#"
                 fontFamily="SFProRounded"
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
@@ -210,7 +210,7 @@ export default function LargeWithLogoLeft() {
                 cursor="context-menu"
               >
                 Like us on
-              </Link>
+              </Text>
             </Flex>
             <Flex>
               <IconButton
@@ -231,7 +231,7 @@ export default function LargeWithLogoLeft() {
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 cursor="context-menu"
               />
-              <Link
+              <Text
                 href="#"
                 fontFamily="SFProRounded"
                 fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
@@ -241,7 +241,7 @@ export default function LargeWithLogoLeft() {
                 cursor="context-menu"
               >
                 Subscribe us on
-              </Link>
+              </Text>
             </Flex>
           </Stack>
         </Flex>
