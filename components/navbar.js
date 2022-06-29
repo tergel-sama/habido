@@ -1,11 +1,13 @@
-import { Box, Flex, Collapse, Text, IconButton, Button, Stack, useDisclosure, Image, Link } from "@chakra-ui/react";
+/* eslint-disable react/jsx-no-comment-textnodes */
+import { Box, Flex, Collapse, Text, IconButton, Button, Stack, useDisclosure, Image } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
 
 import LogoImage from "../assets/img/navbarLogo.png";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const router = useRouter();
   return (
     <Box>
       <Flex minH="100px" py={{ base: 2 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">
@@ -19,7 +21,9 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "end", md: "start" }}>
           <Text fontFamily="heading">
-            <Image src={LogoImage?.src} />
+            <a onClick={() => router.push("/")}>
+              <Image src={LogoImage?.src} />
+            </a>
           </Text>
         </Flex>
         <Stack
@@ -40,16 +44,8 @@ export default function WithSubnavigation() {
           >
             Зөвлөмж
           </Button>
-          <Button
-            as="a"
-            fontSize="20px"
-            fontFamily="SfProRounded"
-            fontWeight={500}
-            color="#424852"
-            variant="link"
-            href="#"
-          >
-            <Link href="#linkScroll">Холбоо барих</Link>
+          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="link" href="#">
+            <a href="#footerScroll">Холбоо барих</a>
           </Button>
           <Button
             display={{ base: "none", md: "inline-flex" }}
@@ -65,7 +61,14 @@ export default function WithSubnavigation() {
             bg="#fa6c51"
             href="#"
           >
-            <span className="h-[25px]">Апп татах</span>
+            <a
+              href="https://play.google.com/store/apps/details?id=mn.app.habido_app"
+              className="h-[25px]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Апп татах
+            </a>
           </Button>
         </Stack>
       </Flex>
@@ -74,7 +77,7 @@ export default function WithSubnavigation() {
           <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="link" href="#">
             Зөвлөмж
           </Button>
-          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="link" href="#">
+          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="" href="#">
             Холбоо барих
           </Button>
           <Button
