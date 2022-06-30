@@ -227,7 +227,7 @@ export default function Feature3() {
   return (
     <Box pt="58px" pl={{ base: 4, md: 12, "2xl": "15rem" }}>
       <Text
-        w="522px"
+        w={{ base: "auto", md: "520px", "2xl": "522px" }}
         lineHeight="normal"
         fontWeight={300}
         fontSize="55px"
@@ -240,7 +240,7 @@ export default function Feature3() {
       </Text>
       <SimpleGrid columns={{ base: 1, xl: 2 }}>
         <Box>
-          <SimpleGrid columns={2}>
+          <SimpleGrid columns={{ base: 1, sm: 2, xl: 2 }}>
             <Box>
               {habit1.map((item, index) => (
                 <Habit key={index} data={item} />
