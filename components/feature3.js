@@ -239,7 +239,7 @@ export default function Feature3() {
         хэрэгжүүлэх боломж
       </Text>
       <SimpleGrid columns={{ base: 1, xl: 2 }}>
-        <Box>
+        <Box paddingRight={{ base: 4, sm: "revert" }}>
           <SimpleGrid columns={{ base: 1, sm: 2, xl: 2 }}>
             <Box>
               {habit1.map((item, index) => (

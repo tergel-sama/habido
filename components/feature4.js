@@ -24,7 +24,7 @@ export default function Feature4() {
           >
             <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа татаарай</span> <br />
           </chakra.h1>
-          <Flex mb={5} flexDir={{ base: "column", md: "row" }}>
+          <Flex mb={5} flexDir={{ base: "column", md: "row" }} pr={{ base: 4, sm: "revert" }}>
             <Button borderRadius={13} m={1}>
               <Box color="gray.400" margin={1}>
                 <SiApple size={22} />

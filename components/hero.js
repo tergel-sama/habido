@@ -50,6 +50,8 @@ export default function App() {
           w="full"
           h={{ base: 64, md: "full" }}
           loading="lazy"
+          position="relative"
+          height="100%"
         />
       </Box>
     </SimpleGrid>
