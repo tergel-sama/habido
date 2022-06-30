@@ -1,11 +1,12 @@
 import { Box, Flex, Collapse, Text, IconButton, Button, Stack, useDisclosure, Image } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
 
 import LogoImage from "../assets/img/navbarLogo.png";
 
 export default function WithSubnavigation() {
+  const router = useRouter();
   const { isOpen, onToggle } = useDisclosure();
-
   return (
     <Box>
       <Flex minH="100px" py={{ base: 2 }} px={{ base: 4, md: 12, "2xl": "15rem" }} borderStyle="solid" align="center">
@@ -18,11 +19,10 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "end", md: "start" }}>
-          <Text fontFamily="heading">
+          <Text fontFamily="heading" cursor="pointer" onClick={() => router.push("/")}>
             <Image src={LogoImage?.src} />
           </Text>
         </Flex>
-
         <Stack
           display={{ base: "none", md: "flex" }}
           flex={{ base: 1, md: 0 }}
@@ -38,19 +38,12 @@ export default function WithSubnavigation() {
             color="#424852"
             variant="link"
             href="#"
+            onClick={() => router.push("/advise")}
           >
             Зөвлөмж
           </Button>
-          <Button
-            as="a"
-            fontSize="20px"
-            fontFamily="SfProRounded"
-            fontWeight={500}
-            color="#424852"
-            variant="link"
-            href="#"
-          >
-            Холбоо барих
+          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="link" href="#">
+            <a href="#footerScroll">Холбоо барих</a>
           </Button>
           <Button
             display={{ base: "none", md: "inline-flex" }}
@@ -66,17 +59,32 @@ export default function WithSubnavigation() {
             bg="#fa6c51"
             href="#"
           >
-            <span className="h-[25px]">Апп татах</span>
+            <a
+              href="https://play.google.com/store/apps/details?id=mn.app.habido_app"
+              className="h-[25px]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Апп татах
+            </a>
           </Button>
         </Stack>
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <Stack flex={{ base: 1, md: 0 }} justify="flex-end" direction="column" spacing={6}>
-          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="link" href="#">
+          <Button
+            fontSize="20px"
+            fontFamily="SfProRounded"
+            fontWeight={500}
+            color="#424852"
+            variant="link"
+            href="#"
+            onClick={() => router.push("advise")}
+          >
             Зөвлөмж
           </Button>
-          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="link" href="#">
-            Холбоо барих
+          <Button fontSize="20px" fontFamily="SfProRounded" fontWeight={500} color="#424852" variant="" href="#">
+            <a href="#footerScroll">Холбоо барих</a>
           </Button>
           <Button
             alignSelf="center"
@@ -92,7 +100,14 @@ export default function WithSubnavigation() {
             bg="#fa6c51"
             href="#"
           >
-            <span className="h-[25px]">Апп татах</span>
+            <a
+              href="https://play.google.com/store/apps/details?id=mn.app.habido_app"
+              className="h-[25px]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Апп татах
+            </a>
           </Button>
         </Stack>
       </Collapse>
