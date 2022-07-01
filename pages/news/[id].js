@@ -64,6 +64,7 @@ export default function News() {
             width="auto"
             padding="10px"
             cursor="auto"
+            _focus={{ ring: "0px" }}
           >
             {contentData?.tags[0]?.name}
           </Button>
