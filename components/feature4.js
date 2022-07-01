@@ -25,19 +25,31 @@ export default function Feature4() {
             <span className="text-[#fa6c51]"> Яг одоо аппликейшнаа татаарай</span> <br />
           </chakra.h1>
           <Flex mb={5} flexDir={{ base: "column", md: "row" }} pr={{ base: 4, sm: "revert" }}>
-            <Button borderRadius={13} m={1}>
+            <Button
+              borderRadius={13}
+              m={1}
+              onClick={() => window?.open("https://apps.apple.com/mn/app/habido/id1579996644")}
+            >
               <Box color="gray.400" margin={1}>
                 <SiApple size={22} />
               </Box>{" "}
               App Store
             </Button>
-            <Button borderRadius={13} m={1}>
+            <Button
+              borderRadius={13}
+              m={1}
+              onClick={() => window?.open("https://play.google.com/store/apps/details?id=mn.app.habido_app")}
+            >
               <Box color="green.400" margin={1}>
                 <AiFillAndroid size={25} />
               </Box>{" "}
               Google Play
             </Button>
-            <Button borderRadius={13} m={1}>
+            <Button
+              borderRadius={13}
+              m={1}
+              onClick={() => window?.open("https://appgallery.huawei.com/app/C105058515")}
+            >
               <Box color="red.600" margin={1}>
                 <SiHuawei size={25} />
               </Box>{" "}

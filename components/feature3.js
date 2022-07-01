@@ -230,7 +230,7 @@ export default function Feature3() {
         w={{ base: "auto", md: "520px", "2xl": "522px" }}
         lineHeight="normal"
         fontWeight={300}
-        fontSize="55px"
+        fontSize={{ base: "4xl", md: "4xl", lg: "55px" }}
         fontFamily="SFProRounded"
         mb={12}
         textColor="#fa6c51"
