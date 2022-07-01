@@ -15,12 +15,12 @@ export default function Advise() {
   const [name, setName] = useState("");
   const [isHighlight, setHighlight] = useState(false);
   const [searchText, setSearchText] = useState("");
-  const { data: highlightData, error } = useSWR("http://192.168.2.21:8041/web/highlighted-contents", fetcher);
+  const { data: highlightData, error } = useSWR("http://app.habido.mn/web/highlighted-contents", fetcher);
   const { data: contents } = useSWR(
-    `http://192.168.2.21:8041/web/contents?SearchText=${searchText}&Name=${name}&Pid=${pag}&Psize=6`,
+    `http://app.habido.mn/web/contents?SearchText=${searchText}&Name=${name}&Pid=${pag}&Psize=6`,
     fetcher
   );
-  const { data: tags } = useSWR("http://192.168.2.21:8041/web/content/tags", fetcher);
+  const { data: tags } = useSWR("http://app.habido.mn/web/content/tags", fetcher);
 
   if (error) return <div>failed to load</div>;
   if (!highlightData) return <div>loading...</div>;
