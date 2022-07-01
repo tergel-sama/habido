@@ -8,7 +8,7 @@ export default function App() {
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spacing={0}
-      h="110vh"
+      h="50%"
       bg="#f4f6f8"
       overflow="hidden"
       _after={{
@@ -27,7 +27,8 @@ export default function App() {
         alignItems="start"
         justifyContent="center"
         pl={{ base: 4, md: 12, "2xl": "15rem" }}
-        py={24}
+        pb={{ base: 0, "2xl": 24 }}
+        pt={{ base: 8, "2xl": 24 }}
       >
         <chakra.h1
           fontFamily="SFProRounded"
@@ -42,15 +43,8 @@ export default function App() {
           </span>
         </chakra.h1>
       </Flex>
-      <Box>
-        <Image
-          src={HeroImage?.src}
-          alt="holding phone"
-          fit="cover"
-          w="full"
-          h={{ base: 64, md: "full" }}
-          loading="lazy"
-        />
+      <Box display="flex">
+        <Image src={HeroImage?.src} alt="holding phone" fit="scale-down" w="full" h="full" loading="lazy" />
       </Box>
     </SimpleGrid>
   );

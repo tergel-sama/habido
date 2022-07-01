@@ -39,6 +39,7 @@ export default function WithSubnavigation() {
             variant="link"
             href="#"
             onClick={() => router.push("/advise")}
+            _focus={{ ring: "0px" }}
           >
             Зөвлөмж
           </Button>
@@ -79,6 +80,7 @@ export default function WithSubnavigation() {
             color="#424852"
             variant="link"
             href="#"
+            _focus={{ ring: "0px" }}
             onClick={() => router.push("advise")}
           >
             Зөвлөмж
@@ -109,6 +111,7 @@ export default function WithSubnavigation() {
               Апп татах
             </a>
           </Button>
+          <Box />
         </Stack>
       </Collapse>
     </Box>

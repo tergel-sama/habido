@@ -8,7 +8,7 @@ export default function Habit({ data }) {
       <Text my={6} fontFamily="SFProRounded" textColor="#424852" fontSize="16px" fontWeight={900} lineHeight="normal">
         {data?.title}
       </Text>
-      <SimpleGrid spacingY={4} columns={2}>
+      <SimpleGrid spacingY={4} columns={2} justifyItems="center">
         {data?.content.map((item, index) => (
           <LittleCard key={index} data={item} />
         ))}

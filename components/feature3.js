@@ -227,10 +227,10 @@ export default function Feature3() {
   return (
     <Box pt="58px" pl={{ base: 4, md: 12, "2xl": "15rem" }}>
       <Text
-        w="522px"
+        w={{ base: "auto", md: "520px", "2xl": "522px" }}
         lineHeight="normal"
         fontWeight={300}
-        fontSize="55px"
+        fontSize={{ base: "4xl", md: "4xl", lg: "55px" }}
         fontFamily="SFProRounded"
         mb={12}
         textColor="#fa6c51"
@@ -239,8 +239,8 @@ export default function Feature3() {
         хэрэгжүүлэх боломж
       </Text>
       <SimpleGrid columns={{ base: 1, xl: 2 }}>
-        <Box>
-          <SimpleGrid columns={2}>
+        <Box paddingRight={{ base: 4, sm: "revert" }}>
+          <SimpleGrid columns={{ base: 1, sm: 2, xl: 2 }}>
             <Box>
               {habit1.map((item, index) => (
                 <Habit key={index} data={item} />
