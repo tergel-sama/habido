@@ -65,3 +65,12 @@ a {
   text-overflow: ellipsis;
 }
 
+.threeRows > * {
+  display: none;
+}
+
+.threeRows > :first-child {
+  display: block;
+}
+
+

@@ -1,8 +1,6 @@
 import handleViewport from "react-in-viewport";
-import { useState, useEffect } from "react";
 
-const Block = (props) => {
-  const { inViewport, forwardedRef } = props;
+const Block = ({ id, inViewport, forwardedRef }) => {
   const isPlaying = inViewport ? 1 : 0;
 
   return (
@@ -10,7 +8,7 @@ const Block = (props) => {
       <iframe
         width="100%"
         className="h-[100vh]"
-        src={`https://www.youtube.com/embed/${props?.id}?autoplay=${isPlaying}&mute=1`}
+        src={`https://www.youtube.com/embed/${id}?autoplay=${isPlaying}&mute=1`}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
         allowFullScreen
