@@ -22,7 +22,7 @@ export default function LargeWithLogoLeft() {
           <Flex pt={{ base: "30px", md: " 40px", "2xl": "71px" }} pb={{ base: "19px", md: "25px", "2xl": "39px" }}>
             <Stack width="100%">
               <Box pb="24.3px" margin={{ base: "auto", sm: "revert" }}>
-                <Image src={Logo?.src} />
+                <Image maxW="200px" src={Logo?.src} />
               </Box>
 
               <Flex textAlign={{ base: "center", sm: "revert" }}>

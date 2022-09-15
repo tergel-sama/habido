@@ -20,7 +20,7 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "end", md: "start" }}>
           <Text fontFamily="heading" cursor="pointer" onClick={() => router.push("/")}>
-            <Image src={LogoImage?.src} />
+            <Image maxW="150px" src={LogoImage?.src} />
           </Text>
         </Flex>
         <Stack
