@@ -77,7 +77,7 @@ export default function LargeWithLogoLeft() {
                 pt="3px"
                 cursor="context-menu"
               >
-                99999999
+                99980838
               </Text>
             </Flex>
             <Flex pb="17px">
@@ -167,7 +167,8 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
-                cursor="context-menu"
+                cursor="pointer"
+                onClick={() => window.open("https://www.instagram.com/habido.official/", "_blank")}
               />
               <Text
                 href="#"
@@ -198,7 +199,8 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
-                cursor="context-menu"
+                cursor="pointer"
+                onClick={() => window.open("https://www.facebook.com/habidoapp", "_blank")}
               />
               <Text
                 href="#"
@@ -229,7 +231,8 @@ export default function LargeWithLogoLeft() {
                 maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minH={{ base: "25px", md: "30px", "2xl": "40px" }}
                 minW={{ base: "25px", md: "30px", "2xl": "40px" }}
-                cursor="context-menu"
+                cursor="pointer"
+                onClick={() => window.open("https://www.youtube.com/channel/UCevfGz8MRXcixV6C-ttqPkw", "_blank")}
               />
               <Text
                 href="#"
@@ -256,7 +259,10 @@ export default function LargeWithLogoLeft() {
             textAlign={{ base: "center", sm: "revert" }}
             cursor="context-menu"
           >
-            All rights reserved 2022. Optimal N Max LLC.
+            Powered by{" "}
+            <a href="http://optimal.mn/" target="_blank" rel="noreferrer">
+              <strong>Optimal Nmax</strong>
+            </a>
           </Text>
           <Text
             textAlign={{ base: "center", sm: "revert" }}
@@ -266,9 +272,9 @@ export default function LargeWithLogoLeft() {
             fontWeight="500"
             cursor="context-menu"
           >
-            Powered By{" "}
+            Developed by{" "}
             <a href="https://tanasoft.mn/" target="_blank" rel="noreferrer">
-              <strong>TanaSoft</strong>
+              <strong>Tanasoft LLC</strong>
             </a>
           </Text>
         </Stack>
