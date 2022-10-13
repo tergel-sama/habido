@@ -108,7 +108,7 @@ export default function LargeWithLogoLeft() {
                 pt="3px"
                 cursor="context-menu"
               >
-                habido@optimal.mn
+                info@habido.mn
               </Text>
             </Flex>
             <Flex>
