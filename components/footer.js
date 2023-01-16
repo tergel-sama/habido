@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Box, Stack, Text, Image, SimpleGrid, Spacer, Flex, IconButton } from "@chakra-ui/react";
-import { AiOutlineMail, AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai";
+import { Box, Stack, Text, Image, SimpleGrid, Spacer, Flex, IconButton, Button } from "@chakra-ui/react";
+import { AiOutlineMail, AiOutlineInstagram, AiOutlineYoutube, AiOutlineSafety } from "react-icons/ai";
+import { useRouter } from "next/router";
 import { GoLocation } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
 import { BsTelephone } from "react-icons/bs";
@@ -8,6 +9,7 @@ import { BsTelephone } from "react-icons/bs";
 import Logo from "../assets/img/navbarLogo.png";
 
 export default function LargeWithLogoLeft() {
+  const router = useRouter();
   return (
     <Box
       id="footerScroll"
@@ -214,7 +216,7 @@ export default function LargeWithLogoLeft() {
                 Like us on
               </Text>
             </Flex>
-            <Flex>
+            <Flex pb="17px">
               <IconButton
                 variant="outline"
                 colorScheme="white"
@@ -245,6 +247,39 @@ export default function LargeWithLogoLeft() {
               >
                 Subscribe us on
               </Text>
+            </Flex>
+            <Flex>
+              <IconButton
+                variant="outline"
+                colorScheme="white"
+                aria-label="fb"
+                borderColor="#fa6c51"
+                fontSize={{ base: "10px", md: "15px", "2xl": "20px" }}
+                icon={<AiOutlineSafety color="white" />}
+                rounded="full"
+                backgroundColor="#fa6c51"
+                marginRight="10px"
+                h={{ base: "25px", md: "30px", "2xl": "40px" }}
+                w={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                maxW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minH={{ base: "25px", md: "30px", "2xl": "40px" }}
+                minW={{ base: "25px", md: "30px", "2xl": "40px" }}
+                cursor="pointer"
+                onClick={() => router.push("privacy")}
+              />
+              <Button
+                fontFamily="SfProRounded"
+                as="a"
+                fontSize={{ base: "13px", md: "16px", "2xl": "20px" }}
+                fontWeight={500}
+                color="#424852"
+                variant="link"
+                _focus={{ ring: "0px" }}
+                onClick={() => router.push("privacy")}
+              >
+                Privacy Policy
+              </Button>
             </Flex>
           </Stack>
         </Flex>
