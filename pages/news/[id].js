@@ -8,7 +8,7 @@ const fetcher = (url) => fetch(url).then((result) => result.json());
 export default function News() {
   const router = useRouter();
   const { id } = router.query;
-  const { data: contentData, error } = useSWR(`http://app.habido.mn/web/content/${id}`, fetcher);
+  const { data: contentData, error } = useSWR(`https://app.habido.mn/web/content/${id}`, fetcher);
   const isodate = contentData?.auditLog?.createdAt;
   const date = [];
   let time = "";

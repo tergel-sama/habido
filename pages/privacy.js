@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Box, HStack, Text, Table, Thead, Tr, Th, Tbody, Td } from "@chakra-ui/react";
 
 export default function Privacy() {
