@@ -1,3 +1,4 @@
+import Head from "next/head";
 import dynamic from "next/dynamic";
 
 import Hero from "../components/hero";
@@ -12,6 +13,9 @@ const FeatureWithNoSSR = dynamic(() => import("../components/feature"), { ssr: f
 export default function Home() {
   return (
     <>
+      <Head>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/24030131.js" />
+      </Head>
       <Hero />
       <FeatureWithNoSSR />
       <YoutubeEmbed playerId="gIx2F0o2jWQ" />
