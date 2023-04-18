@@ -38,7 +38,7 @@ export default function WithSubnavigation() {
             color="#424852"
             variant="link"
             href="#"
-            onClick={() => router.push("/advise")}
+            onClick={() => router.push("/blog")}
             _focus={{ ring: "0px" }}
           >
             Зөвлөмж
@@ -81,7 +81,7 @@ export default function WithSubnavigation() {
             variant="link"
             href="#"
             _focus={{ ring: "0px" }}
-            onClick={() => router.push("advise")}
+            onClick={() => router.push("/blog")}
           >
             Зөвлөмж
           </Button>
